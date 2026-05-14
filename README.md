@@ -6,9 +6,10 @@ A layered Claude Code skill workspace for fitness, nutrition, fat-loss planning,
 ## Repository Structure
 - `SKILL.md` - root orchestrator
 - `profiles/` - durable health profile and recent progress memory files
-- `skills/` - modular intake, safety, calorie, nutrition, training, exercise, memory, and adjustment engines
+- `skills/` - modular intake, safety, calorie, nutrition, training, exercise, memory, adjustment, and coach research engines
 - `references/` - stable background rules and setup guides
 - `coach_profiles/` - named coach profiles for matching and mixing
+- `coach_research_notes/` - optional public-content augmentation notes for named coaches
 - `examples/` - example outputs and memory updates
 - `scripts/` - local exercise database setup and query tools
 
@@ -33,6 +34,14 @@ python3 scripts/query_exercises.py --id Incline_Dumbbell_Press
 
 ## Optional Public-Web Augmentation
 Static coach profiles are the default. Public-web augmentation is optional and should only be used when the user explicitly asks for newer public content or deeper coach-specific detail.
+
+## Coach Research Augmentation
+Use this layer only for the explicit-request path. It refines the static baseline with optional public-content nuance; it does not replace the static profile.
+
+- Read the static coach profile first.
+- Use `skills/coach-research-engine.md` to decide whether augmentation is allowed.
+- Read `coach_research_notes/*.md` only on explicit request.
+- If no augmentation note exists, fall back to the static profile and say so.
 
 ## Quick Start
 1. Read `SKILL.md` for the orchestration flow.
