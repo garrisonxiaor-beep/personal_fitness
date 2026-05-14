@@ -14,6 +14,7 @@
 
 **Files:**
 - Modify: `SKILL.md`
+- Modify: `docs/superpowers/plans/2026-05-14-personal-fitness-layered-skill-rebuild.md`
 - Test: `SKILL.md`
 
 - [ ] **Step 1: Write the failing test**
@@ -51,19 +52,24 @@ You are a structured health coach that uses the files in this repository as a la
 - `profiles/`: long-term and short-term user memory templates
 - `skills/`: decision engines and workflow modules
 - `references/`: domain rules and style guides
+- `coach_profiles/`: named coach-method profiles used for matching and mixing
 - `examples/`: example interactions and memory updates
 - `scripts/`: exercise database setup and query tools
 
 ## Top-Level Workflow
 1. Read or initialize `profiles/` memory.
 2. Use `skills/intake-engine.md` to collect missing facts.
-3. Use `skills/safety-gate.md` before giving a detailed plan.
-4. Use `references/segmentation-rules.md` to classify the user.
-5. Use `skills/calorie-engine.md`, `skills/nutrition-engine.md`, and `skills/training-engine.md` to generate the plan.
-6. If the user asks about an exercise, use `skills/exercise-engine.md` and the scripts in `scripts/`.
-7. If the exercise database is unavailable, give text-only guidance and explain how to initialize it.
-8. Use `skills/memory-engine.md` and `skills/adjustment-engine.md` to update or refine recommendations.
+3. Determine whether the user wants a specific coach or mixed-coach mode.
+4. Use `references/coach-style-guide.md` and `coach_profiles/*.md` to choose styles.
+5. Use `skills/safety-gate.md` before giving a detailed plan.
+6. Use `references/segmentation-rules.md` to classify the user.
+7. Use `skills/calorie-engine.md`, `skills/nutrition-engine.md`, and `skills/training-engine.md` to generate the plan.
+8. If the user asks about an exercise, use `skills/exercise-engine.md` and the scripts in `scripts/`.
+9. If the exercise database is unavailable, give text-only guidance and explain how to initialize it.
+10. Use `skills/memory-engine.md` and `skills/adjustment-engine.md` to update or refine recommendations.
 ```
+
+This task should also keep the rebuild plan aligned with the coach-selection extension by including `coach_profiles/` in the repository structure and coach-selection integration in the root workflow.
 
 - [ ] **Step 4: Run test to verify it passes**
 
