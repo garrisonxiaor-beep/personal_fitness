@@ -1,65 +1,68 @@
-# Personal Fitness Coach
+# 个人健身教练
 
-A layered fitness skill workspace that combines **coach-style personalization** with **systematic training programming**. Supports hypertrophy, fat-loss/recomposition, body-part specialization, and powerlifting with named coach profiles, modular engines, built-in exercise library, and optional long-term user data persistence.
+分层健身技能工作空间，结合**教练风格个性化**与**系统化训练编程**。支持增肌、减脂/重塑、部位专攻和力量举，配备命名教练档案、模块化引擎、内置动作库和可选的长期用户数据持久化。
 
-## What This Repository Is
+## 这是什么
 
-A structured health-coach skill that:
-- Turns user fitness data into goal-aware, coach-style-personalized recommendations
-- Covers four programming domains: hypertrophy, fat loss/recomposition, body-part specialization, powerlifting
-- Provides detailed split guidance: 二分化, 三分化/PPL, 四分化, 五分化
-- Supports named coach styles (周六野, Pamela Reif, 凯圣王×谭指导, etc.) with mixing
-- Includes a built-in exercise library with alias matching and substitution logic
-- Optionally persists user data across sessions
+一个结构化健康教练技能，能够：
 
-## Repository Structure
+- 将用户健身数据转化为目标导向、教练风格个性化的建议
+- 覆盖四大编程领域：增肌、减脂/重塑、部位专攻、力量举
+- 提供详细的分化指导：二分化、三分化/PPL、四分化、五分化
+- 支持命名教练风格（周六野、Pamela Reif、凯圣王×谭指导 等）及混搭
+- 包含内置动作库，支持别名匹配和替换逻辑
+- 可选地跨会话持久化用户数据
+
+## 仓库结构
 
 ```
-├── SKILL.md                              # Root orchestrator
-├── agents/openai.yaml                    # Codex/OpenAI UI metadata
-├── profiles/                             # User memory templates
-├── skills/                               # Decision engines (9 modules)
-│   ├── intake-engine.md                  # Information collection
-│   ├── safety-gate.md                    # Safety screening
-│   ├── calorie-engine.md                 # Calorie estimation
-│   ├── nutrition-engine.md               # Nutrition strategy
-│   ├── training-engine.md                # Training + goal-module routing
-│   ├── exercise-engine.md                # Exercise selection + matching
-│   ├── memory-engine.md                  # Memory read/write
-│   ├── adjustment-engine.md              # Plan adjustment + decision tree
-│   └── coach-research-engine.md          # Optional coach augmentation
-├── coach_profiles/                       # 7 named coach profiles
-├── coach_research_notes/                 # Optional public-content augmentation
-├── data/exercise-library.json            # Built-in exercise library (147+ exercises)
-├── references/                           # Domain rules and guides
-│   ├── training-algorithm-library.md     # Shared programming rules
-│   ├── recommendation-decision-tree.md   # Bottleneck → smallest action
-│   ├── goal-hypertrophy.md               # Hypertrophy module
-│   ├── goal-fat-loss-recomposition.md    # Fat-loss module
-│   ├── goal-specialization.md            # Specialization module
-│   ├── goal-powerlifting.md              # Powerlifting module
-│   ├── hypertrophy-splits.md             # Split selector
-│   ├── split-two-division.md             # 二分化 advanced
-│   ├── ppl-practical.md                  # 三分化/PPL advanced
-│   ├── split-four-division.md            # 四分化 advanced
-│   ├── split-five-division.md            # 五分化 advanced
+├── SKILL.md                              # 根编排器
+├── agents/openai.yaml                    # Codex/OpenAI UI 元数据
+├── profiles/                             # 用户记忆模板
+├── skills/                               # 决策引擎（9 个模块）
+│   ├── intake-engine.md                  # 信息收集
+│   ├── safety-gate.md                    # 安全筛查
+│   ├── calorie-engine.md                 # 热量估算
+│   ├── nutrition-engine.md               # 营养策略
+│   ├── training-engine.md                # 训练 + 目标模块路由
+│   ├── exercise-engine.md                # 动作选择 + 匹配
+│   ├── memory-engine.md                  # 记忆读写
+│   ├── adjustment-engine.md              # 计划调整 + 决策树
+│   └── coach-research-engine.md          # 可选教练增强
+├── coach_profiles/                       # 7 个命名教练档案
+├── coach_research_notes/                 # 可选公开内容增强
+├── data/exercise-library.json            # 内置动作库（147+ 动作）
+├── references/                           # 领域规则和指南
+│   ├── training-algorithm-library.md     # 共享编程规则
+│   ├── recommendation-decision-tree.md   # 瓶颈 → 最小行动
+│   ├── goal-hypertrophy.md               # 增肌模块
+│   ├── goal-fat-loss-recomposition.md    # 减脂模块
+│   ├── goal-specialization.md            # 专攻模块
+│   ├── goal-powerlifting.md              # 力量举模块
+│   ├── hypertrophy-splits.md             # 分化选择器
+│   ├── split-two-division.md             # 二分化进阶
+│   ├── ppl-practical.md                  # 三分化/PPL 进阶
+│   ├── split-four-division.md            # 四分化进阶
+│   ├── split-five-division.md            # 五分化进阶
 │   ├── fat-loss-recomposition-advanced.md
 │   ├── specialization-advanced.md
 │   ├── powerlifting-advanced.md
 │   ├── exercise-library-schema.md
 │   ├── coach-style-guide.md
 │   ├── coach-research-policy.md
-│   └── ... more references
-├── scripts/                              # Python tools
-│   ├── setup_exercise_db.py              # External DB setup
-│   └── query_exercises.py                # Exercise queries
-├── examples/                             # Usage examples
-└── templates/                            # Intake and data templates (Phase 3)
+│   └── ... 更多参考文档
+├── scripts/                              # Python 工具
+│   ├── setup_exercise_db.py              # 外部数据库设置
+│   ├── query_exercises.py                # 动作查询
+│   ├── manage_user_data.py               # 用户数据管理
+│   └── summarize_training_logs.py        # 训练日志汇总
+├── examples/                             # 使用示例
+└── templates/                            # 信息收集和数据模板
 ```
 
-## Choose Your Coach
+## 选择你的教练
 
-| Coach | Bias | Best For |
+| 教练 | 偏重 | 最适合 |
 |---|---|---|
 | 凯圣王×谭指导 | 力量增长 / 三分化 | 想系统练力量和增肌的人 |
 | 周六野 | 塑形 / 减脂 | 新手到中级 |
@@ -69,24 +72,24 @@ A structured health-coach skill that:
 | 韩小四 | 温和减脂 | 零基础、怕受伤 |
 | 海洋饼干 | 减脂 / 全身塑形 | 中等强度，训练饮食并重 |
 
-## Mixed-Coach Mode
+## 混搭教练模式
 
-You can mix coaches by domain: strength with 凯圣王×谭指导, cardio with Pamela Reif, recovery with Coffee Lam.
+你可以按领域混搭教练：力量日用凯圣王×谭指导，有氧用 Pamela Reif，恢复用 Coffee Lam。
 
-## Goal Modules
+## 目标模块
 
-| Goal | Module | Advanced |
+| 目标 | 模块 | 进阶参考 |
 |---|---|---|
-| 增肌 / Hypertrophy | `goal-hypertrophy.md` + split guides | `ppl-practical.md`, `split-*-division.md` |
+| 增肌 / Hypertrophy | `goal-hypertrophy.md` + 分化指南 | `ppl-practical.md`、`split-*-division.md` |
 | 减脂 / Fat Loss | `goal-fat-loss-recomposition.md` | `fat-loss-recomposition-advanced.md` |
 | 部位专攻 / Specialization | `goal-specialization.md` | `specialization-advanced.md` |
 | 力量举 / Powerlifting | `goal-powerlifting.md` | `powerlifting-advanced.md` |
 
-## Exercise Database and Image Lookup
+## 动作数据库和图片查询
 
-Built-in library: `data/exercise-library.json` (always available, 147+ exercises).
+内置库：`data/exercise-library.json`（始终可用，147+ 动作）。
 
-External database (optional, for image-backed lookup):
+外部数据库（可选，用于图片查询）：
 ```bash
 python3 scripts/setup_exercise_db.py
 python3 scripts/setup_exercise_db.py --check-db
@@ -94,24 +97,24 @@ python3 scripts/query_exercises.py --muscle chest --equipment dumbbell
 python3 scripts/query_exercises.py --id Incline_Dumbbell_Press --detailed
 ```
 
-## Decision Framework
+## 决策框架
 
-Every plan modification follows `references/recommendation-decision-tree.md`:
-1. Diagnose the bottleneck (under-stimulus, over-fatigue, technique mismatch, etc.)
-2. Choose the smallest useful change
-3. Define measurable indicators for the next 2-6 weeks
+每次计划修改遵循 `references/recommendation-decision-tree.md`：
+1. 诊断瓶颈（刺激不足、过度疲劳、技术不匹配等）
+2. 选择最小有效改变
+3. 定义接下来 2-6 周的可量化指标
 
-## Optional Public-Web Augmentation
+## 可选公开网络增强
 
-Static coach profiles are the default. Public-web augmentation is optional and only used when the user explicitly asks for newer public content or deeper coach-specific detail.
+静态教练档案是默认来源。公开网络增强是可选的，仅在用户明确要求更新公开内容或更深教练细节时使用。
 
-## Quick Start
+## 快速开始
 
-1. Read `SKILL.md` for the orchestration flow.
-2. Use `skills/` for decision engines, `references/` for domain rules, `coach_profiles/` for style selection.
-3. Use `data/exercise-library.json` for exercise selection.
-4. Initialize the external exercise database only if you need image lookup.
+1. 阅读 `SKILL.md` 了解编排流程。
+2. 使用 `skills/` 作为决策引擎，`references/` 作为领域规则，`coach_profiles/` 选择风格。
+3. 使用 `data/exercise-library.json` 进行动作选择。
+4. 仅在需要图片查询时初始化外部动作数据库。
 
-## Degraded Mode Without External Database
+## 无外部数据库时的降级模式
 
-If the external database is missing, the system still provides full exercise guidance using the built-in library and explains how to initialize `exercise-db/`.
+如外部数据库缺失，系统仍可使用内置库提供完整的动作指导，并说明如何初始化 `exercise-db/`。

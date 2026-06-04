@@ -1,146 +1,146 @@
-# Nutrition Engine
+# 营养引擎
 
-## Core Principle
-Nutrition supports training. Every nutrition recommendation must be tied to a training or body-composition decision. Do not give nutrition-only advice when there is no training context.
+## 核心原则
+营养支持训练。每条营养建议必须与训练或身体成分决策关联。无训练上下文时不给纯营养建议。
 
-## Macro Targets by Goal
+## 各目标宏量营养素目标
 
-### Protein (anchor first)
+### 蛋白质（优先锚定）
 
-| Goal | Daily target | Per-meal minimum | Notes |
+| 目标 | 每日目标 | 每餐最少 | 备注 |
 |---|---|---|---|
-| Fat loss / recomposition | 1.8-2.4 g/kg bodyweight | 25-40 g | Higher end during larger deficit |
-| Hypertrophy / muscle gain | 1.6-2.2 g/kg bodyweight | 25-40 g | Upper end for experienced trainees |
-| Maintenance | 1.4-1.8 g/kg bodyweight | 20-30 g | Maintain muscle, support recovery |
-| Powerlifting | 1.6-2.2 g/kg bodyweight | 25-40 g | Preserve strength during cuts |
-| Specialization | 1.6-2.2 g/kg bodyweight | 25-40 g | Support priority muscle recovery |
+| 减脂 / 重塑 | 1.8-2.4 g/kg 体重 | 25-40 g | 较大缺口时取上限 |
+| 增肌 | 1.6-2.2 g/kg 体重 | 25-40 g | 有经验训练者取上限 |
+| 维持 | 1.4-1.8 g/kg 体重 | 20-30 g | 维持肌肉，支持恢复 |
+| 力量举 | 1.6-2.2 g/kg 体重 | 25-40 g | 减脂期保持力量 |
+| 部位专攻 | 1.6-2.2 g/kg 体重 | 25-40 g | 支持优先肌群恢复 |
 
-Protein timing: spread across 3-5 meals. Per-meal doses of 25-50 g are more effective for MPS than concentrating all protein in one or two meals.
+蛋白质时机：分散到 3-5 餐。每餐 25-50 g 比集中在一两餐更有利于肌肉蛋白合成。
 
-If the user is in a large deficit or has low adherence, prioritize hitting the protein floor before optimizing anything else.
+如用户处于大缺口或执行差，优先满足蛋白质底线再优化其他。
 
-### Calories
+### 热量
 
-Use `skills/calorie-engine.md` for BMR/TDEE calculation and deficit/surplus rules.
+使用 `skills/calorie-engine.md` 计算 BMR/TDEE 和缺口/盈余规则。
 
-### Carbohydrates
+### 碳水化合物
 
-| Goal | Daily target | Timing emphasis |
+| 目标 | 每日目标 | 时机重点 |
 |---|---|---|
-| Fat loss (moderate deficit) | 2-3 g/kg bodyweight | Around training; reduce on rest days if needed |
-| Hypertrophy | 4-6 g/kg bodyweight | Before and after training; fuel high-volume sessions |
-| Powerlifting | 3-5 g/kg bodyweight | Before heavy SBD sessions; support CNS recovery |
-| Recomposition | 2.5-4 g/kg bodyweight | Training days higher, rest days moderate |
-| Specialization | 3-5 g/kg bodyweight | Support target-muscle recovery and training volume |
+| 减脂（中等缺口） | 2-3 g/kg 体重 | 训练前后；休息日可减少 |
+| 增肌 | 4-6 g/kg 体重 | 训练前后；为高训练量课程供能 |
+| 力量举 | 3-5 g/kg 体重 | 大重量 SBD 训练前；支持中枢神经系统恢复 |
+| 重塑 | 2.5-4 g/kg 体重 | 训练日较高，休息日适中 |
+| 部位专攻 | 3-5 g/kg 体重 | 支持目标肌群恢复和训练量 |
 
-Carb priority: fuel hard training sessions first. If the user trains in the evening, front-loading carbs is not mandatory—place them where they support performance.
+碳水优先级：先为高强度训练供能。如晚间训练，不必强制早上多吃碳水——放在支持表现的位置。
 
-### Fats
+### 脂肪
 
-| Goal | Daily target | Floor |
+| 目标 | 每日目标 | 底线 |
 |---|---|---|
-| All goals | 0.7-1.2 g/kg bodyweight | Do not go below 0.6 g/kg |
-| Fat loss | 0.7-1.0 g/kg bodyweight | Adequate for hormone function |
-| Hypertrophy | 0.8-1.2 g/kg bodyweight | Support recovery and caloric surplus |
+| 所有目标 | 0.7-1.2 g/kg 体重 | 不低于 0.6 g/kg |
+| 减脂 | 0.7-1.0 g/kg 体重 | 满足激素功能需求 |
+| 增肌 | 0.8-1.2 g/kg 体重 | 支持恢复和热量盈余 |
 
-Do not push fats extremely low. Do not make medical claims about hormone levels.
+不将脂肪推到极低。不做激素水平的医学声明。
 
-### Fiber
+### 膳食纤维
 
-- Target: 25-35 g/day (adjust for tolerance)
-- Purpose: satiety during cuts, gut health, blood sugar stability
-- Increase gradually; sudden jumps cause GI distress
+- 目标：25-35 g/天（根据耐受度调整）
+- 作用：减脂期饱腹感、肠道健康、血糖稳定
+- 逐渐增加；突然跳升易致胃肠不适
 
-## Carb Cycling
+## 碳水周期
 
-### Eligibility Checklist
+### 资格清单
 
-All three must be true before recommending carb cycling:
-1. User has 4+ weeks of consistent training and nutrition tracking
-2. User has demonstrated medium-to-high adherence to a basic plan
-3. User has a clear reason to benefit (e.g., fat-loss plateau with adequate protein, or hard training days that need more fuel)
+推荐碳水周期前，以下三项必须全部满足：
+1. 用户有 4 周以上一致的训练和营养追踪
+2. 用户已证明对基础计划有中高执行度
+3. 用户有明确受益理由（如减脂平台且蛋白质充足，或高强度训练日需要更多燃料）
 
-If any condition is false, simplify the plan first.
+任一条件不满足则先简化计划。
 
-### Carb Cycling Protocol
+### 碳水周期协议
 
-| Day type | Carbs | Fats | Protein |
+| 日类型 | 碳水 | 脂肪 | 蛋白质 |
 |---|---|---|---|
-| High-carb day (heavy training) | 5-7 g/kg | 0.6-0.8 g/kg | Same as goal target |
-| Moderate-carb day (moderate training) | 3-4 g/kg | 0.8-1.0 g/kg | Same as goal target |
-| Low-carb day (rest or light training) | 1.5-2.5 g/kg | 1.0-1.2 g/kg | Same as goal target |
+| 高碳水日（大重量训练） | 5-7 g/kg | 0.6-0.8 g/kg | 同目标值 |
+| 中碳水日（中等训练） | 3-4 g/kg | 0.8-1.0 g/kg | 同目标值 |
+| 低碳水日（休息或轻训练） | 1.5-2.5 g/kg | 1.0-1.2 g/kg | 同目标值 |
 
-Weekly average should match the goal's overall carb target.
+周平均值应匹配目标的整体碳水目标。
 
-### Carb Cycling by Coach Style
-- 凯圣王×谭指导 → structured high/low days mapped to SBD/assistance schedule
-- Pamela Reif → simpler high/low based on training vs rest days
-- 周六野 → usually skip carb cycling; use portion-control instead
-- 韩小四 → never use carb cycling; too complex for beginners
-- 海洋饼干 → moderate structure, eating-out-friendly defaults on low days
+### 碳水周期按教练风格
+- 凯圣王×谭指导 → 结构化高/低碳日映射到 SBD/附件时间表
+- Pamela Reif → 基于训练/休息日的简单高/低
+- 周六野 → 通常跳过碳水周期；用份量控制代替
+- 韩小四 → 绝不使用碳水周期；对新手太复杂
+- 海洋饼干 → 适度结构，低碳日外食友好默认
 
-## Anti-Inflammatory Eating
+## 抗炎饮食
 
-Position as a food-quality framework, not a medical treatment.
+定位为食物质量框架，不是医学治疗。
 
-### Practical Rules
-- Prefer whole foods over ultra-processed foods
-- Include omega-3 rich foods (fatty fish, walnuts, flaxseed) 2-3x/week
-- Emphasize colorful vegetables and fruits
-- Use herbs and spices (turmeric, ginger, garlic) as flavor, not medicine
-- Adequate fiber from diverse sources
-- Do not claim this cures inflammation, disease, or guarantees health outcomes
+### 实用规则
+- 优先全食物而非超加工食品
+- 每周 2-3 次含 omega-3 丰富食物（多脂鱼、核桃、亚麻籽）
+- 强调多彩蔬菜和水果
+- 用香草和香料（姜黄、生姜、大蒜）调味，而非当药
+- 充足膳食纤维来自多样来源
+- 不声称此方法治愈炎症、疾病或保证健康结果
 
-### Coach Style Framing
-- Coffee Lam → emphasize naturally (fits her recovery/food rhythm style)
-- 欧阳春晓 → mention in shaping context (whole foods support skin/line quality)
-- Others → optional mention, not a primary focus
+### 教练风格表达
+- Coffee Lam → 自然融入（契合她恢复/饮食节奏风格）
+- 欧阳春晓 → 在塑形语境提及（全食物支持皮肤/线条质量）
+- 其他 → 可选提及，非主要焦点
 
-## Goal × Nutrition Matrix
+## 目标 × 营养矩阵
 
-### Hypertrophy + Nutrition
-- Priority: caloric surplus + protein floor + carb fuel for training
-- Monitor: weight trend (+0.25-0.5 kg/week), training performance, waist
-- Adjust: if waist rises faster than strength/measurements, reduce surplus 100-200 kcal
+### 增肌 + 营养
+- 优先：热量盈余 + 蛋白质底线 + 训练碳水供能
+- 监测：体重趋势（+0.25-0.5 kg/周）、训练表现、腰围
+- 调整：如腰围增长快于力量/围度，减盈余 100-200 kcal
 
-### Fat Loss + Nutrition
-- Priority: moderate deficit + high protein + carb timing around training
-- Monitor: weekly average weight, waist, training performance, hunger, sleep
-- Adjust: if weight stable 2-3 weeks with good adherence, add steps/cardio before cutting more food
-- Plateau protocol: steps first → cardio → small calorie cut → diet break if needed
+### 减脂 + 营养
+- 优先：中等缺口 + 高蛋白 + 训练前后碳水时机
+- 监测：周均体重、腰围、训练表现、饥饿感、睡眠
+- 调整：如体重稳定 2-3 周且执行良好，先加步数/有氧再削减食物
+- 平台协议：步数 → 有氧 → 小幅热量削减 → 必要时饮食休息
 
-### Recomposition + Nutrition
-- Priority: approximately TDEE or small deficit + high protein + strategic carbs
-- Monitor: waist/photos improving, strength stable or improving, weight stable
-- Adjust: if weight drops fast and strength crashes, raise calories 100-200
+### 重塑 + 营养
+- 优先：大约 TDEE 或小缺口 + 高蛋白 + 策略性碳水
+- 监测：腰围/照片改善、力量稳定或提升、体重稳定
+- 调整：如体重速降且力量崩溃，增 100-200 kcal
 
-### Specialization + Nutrition
-- Priority: support target-muscle recovery with adequate protein and peri-workout carbs
-- Monitor: target-muscle performance and soreness, overall recovery
-- Adjust: if target-muscle recovery is poor, check protein and sleep before adding volume
+### 部位专攻 + 营养
+- 优先：用充足蛋白质和训练前后碳水支持目标肌群恢复
+- 监测：目标肌群表现和酸痛、整体恢复
+- 调整：如目标肌群恢复差，先检查蛋白质和睡眠再加量
 
-### Powerlifting + Nutrition
-- Priority: fuel SBD sessions, preserve muscle during cuts, support CNS recovery
-- Monitor: SBD performance, bodyweight class if applicable, recovery between heavy sessions
-- Adjust: near competition, avoid aggressive cuts; maintain carbs around heavy SBD work
+### 力量举 + 营养
+- 优先：为 SBD 训练供能、减脂期保持肌肉、支持中枢神经系统恢复
+- 监测：SBD 表现、体重级别（如适用）、大重量训练间恢复
+- 调整：临近比赛时避免激进减脂；大重量 SBD 训练前后保持碳水
 
-## Eating-Out Fallbacks
+## 外食降级方案
 
-If the user eats out often or dislikes tracking:
+如用户经常外食或不喜欢追踪：
 
-| Strategy | How to apply |
+| 策略 | 如何应用 |
 |---|---|
-| Plate method | 1/2 vegetables, 1/4 protein, 1/4 starch; add healthy fat |
-| Protein-first ordering | Choose protein source first, build the rest around it |
-| Repeatable meal defaults | Pick 3-5 default meals and rotate; estimate once, reuse |
-| Weekly average | Track loosely during the week, tighten on weekends (or vice versa) |
-| Visual portion guide | Palm = protein, fist = vegetables, cupped hand = carbs, thumb = fats |
+| 餐盘法 | 1/2 蔬菜、1/4 蛋白质、1/4 淀粉；加健康脂肪 |
+| 蛋白质优先点餐 | 先选蛋白质来源，围绕它构建其余 |
+| 可重复默认餐 | 选 3-5 个默认餐轮换；估算一次，反复用 |
+| 周平均 | 工作日宽松追踪，周末收紧（或反之） |
+| 视觉份量指南 | 掌心 = 蛋白质、拳头 = 蔬菜、捧 = 碳水、拇指 = 脂肪 |
 
-Do not insist on precise macro tracking when the user cannot sustain it. Simplicity beats precision that gets abandoned.
+当用户无法坚持精确宏量追踪时，不强求。简单胜过被放弃的精确。
 
-## Coach Style × Nutrition Matrix
+## 教练风格 × 营养矩阵
 
-| Coach | Protein framing | Carb approach | Fat approach | Tracking expectation | Diet simplicity |
+| 教练 | 蛋白质表达 | 碳水方式 | 脂肪方式 | 追踪期望 | 饮食复杂度 |
 |---|---|---|---|---|---|
 | 凯圣王×谭指导 | 精确g/kg目标，分配到每餐 | 训练日/休息日分化 | 适中，不过低 | 期望追踪宏量营养素 | 中等复杂度 |
 | 周六野 | "每餐一份掌心大的蛋白质" | 简单分量控制 | 正常吃就好 | 不强调追踪，关注份量 | 最简单 |
@@ -150,26 +150,26 @@ Do not insist on precise macro tracking when the user cannot sustain it. Simplic
 | 韩小四 | "每餐有点肉蛋奶就行" | 正常吃，减量就好 | 不需要特别关注 | 完全不追踪，只管少吃 | 极简 |
 | 海洋饼干 | 训练+饮食联动 | 跟训练日对齐 | 实际为主 | 中等记录，外食有默认选择 | 中等偏简 |
 
-## Supplements (brief, evidence-graded)
+## 补剂（简述，按证据分级）
 
-| Supplement | Evidence | Use case | Coach style note |
+| 补剂 | 证据 | 使用场景 | 教练风格备注 |
 |---|---|---|---|
-| Whey protein | Strong | Convenient protein source | 凯圣王/Pamela style may suggest; 韩小四 style skip |
-| Creatine monohydrate | Strong | Strength and hypertrophy support | 凯圣王 style may suggest; 周六野 style optional mention |
-| Caffeine | Moderate | Pre-workout energy | Most coaches OK with coffee; do not recommend high doses |
-| Vitamin D | Moderate (if deficient) | Bone health, especially indoor workers | Mention only if relevant |
-| Omega-3 | Moderate | If dietary intake is low | Coffee Lam style may suggest naturally through food |
+| 乳清蛋白 | 强 | 便捷蛋白质来源 | 凯圣王/Pamela 风格可能建议；韩小四风格跳过 |
+| 一水肌酸 | 强 | 力量和增肌支持 | 凯圣王风格可能建议；周六野风格可选提及 |
+| 咖啡因 | 中等 | 训练前能量 | 大多数教练对咖啡 OK；不推荐高剂量 |
+| 维生素 D | 中等（如缺乏） | 骨骼健康，特别是室内工作者 | 仅在相关时提及 |
+| Omega-3 | 中等 | 如饮食摄入低 | Coffee Lam 风格可能通过食物自然建议 |
 
-Do not recommend other supplements without clear evidence. Do not make medical claims. Do not sell or endorse specific brands.
+无明确证据时不推荐其他补剂。不做医学声明。不销售或背书特定品牌。
 
-## Output Rules
+## 输出规则
 
-When generating nutrition recommendations:
-1. Always tie to a training or body-composition decision
-2. Give ranges, not exact prescriptions
-3. State uncertainty when data is sparse
-4. Match coach style for tone and complexity
-5. Use the smallest nutrition change for the next 1-2 weeks
-6. Track: calories, protein, weekly average weight, waist, performance, hunger, steps, sleep
+生成营养建议时：
+1. 始终关联到训练或身体成分决策
+2. 给范围，不给精确处方
+3. 数据稀疏时声明不确定性
+4. 按教练风格匹配语气和复杂度
+5. 使用接下来 1-2 周的最小营养改变
+6. 追踪：热量、蛋白质、周均体重、腰围、表现、饥饿感、步数、睡眠
 
-Read `references/nutrition-playbook.md` for quick-reference rules and `references/nutrition-advanced.md` for deeper strategies.
+阅读 `references/nutrition-playbook.md` 获取快速参考规则，`references/nutrition-advanced.md` 获取深度策略。

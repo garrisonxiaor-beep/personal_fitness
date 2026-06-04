@@ -1,60 +1,60 @@
-# Exercise Engine
+# 动作引擎
 
-## When To Use
-Use when the user asks about a specific exercise, wants exercise examples, needs exercise substitution, or needs image-backed lookup from the exercise database.
+## 何时使用
+当用户询问特定动作、需要动作示例、需要动作替换或需要本地数据库的图片查询时使用。
 
-## Dual Data Source
+## 双数据源
 
-This skill has two exercise data sources:
+本技能有两个动作数据源：
 
-1. **Built-in library**: `data/exercise-library.json` (147+ exercises with Chinese names, body parts, movement patterns, equipment, and goals). Always available. Read `references/exercise-library-schema.md` for the schema.
+1. **内置库**：`data/exercise-library.json`（147+ 动作，含中文名、身体部位、运动模式、器械和目标）。始终可用。阅读 `references/exercise-library-schema.md` 了解数据结构。
 
-2. **External database**: `exercise-db/` (800+ exercises from free-exercise-db with images). Optional. Access via `scripts/query_exercises.py`. Provides image-backed lookup.
+2. **外部数据库**：`exercise-db/`（来自 free-exercise-db 的 800+ 动作及图片）。可选。通过 `scripts/query_exercises.py` 访问。提供图片查询。
 
-## Exercise Matching Flow
+## 动作匹配流程
 
-When selecting, replacing, or rotating exercises:
+在选择、替换或轮换动作时：
 
-1. **Exact match**: exact name in `data/exercise-library.json`
-2. **Alias match**: curated aliases such as 臀推 → 史密斯臀冲, RDL → 罗马尼亚硬拉
-3. **Near-name match**: unique library exercise that clearly contains the requested name
-4. **Same-pattern substitution**: same body part, equipment, and movement pattern
-5. **Outside-library fallback**: allow a temporary outside-library exercise, but clearly state it and explain why the library was insufficient
-6. Ask whether the user wants to add the outside-library exercise when it seems recurring or important
+1. **精确匹配**：`data/exercise-library.json` 中的精确名称
+2. **别名匹配**：精选别名，如 臀推 → 史密斯臀冲，RDL → 罗马尼亚硬拉
+3. **近名匹配**：明确包含请求名称的唯一库动作
+4. **同模式替换**：相同身体部位、器械和运动模式
+5. **库外回退**：允许临时库外动作，但明确说明原因及内置库为何不足
+6. 当动作似乎反复出现或重要时，询问用户是否要添加到库中
 
-Do not refuse to build a training recommendation only because the exercise library is incomplete. Do not present ambiguous or unmatched exercises as confirmed library entries.
+不因动作库不完整而拒绝构建建议。不将模糊或未匹配的动作呈现为已确认的库条目。
 
-## Image Path Output
+## 图片路径输出
 
-When the external `exercise-db/` database is available and a matching exercise contains image paths, return the local image path alongside the exercise name.
+当外部 `exercise-db/` 数据库可用且匹配动作包含图片路径时，返回本地图片路径及动作名称。
 
-Use the query script:
+使用查询脚本：
 ```bash
 python3 scripts/query_exercises.py --muscle chest --equipment dumbbell
 python3 scripts/query_exercises.py --id "Incline_Dumbbell_Press" --detailed
 ```
 
-## Missing Database Fallback
+## 无数据库时的降级
 
-If the external database is unavailable, provide text-only exercise guidance using the built-in `data/exercise-library.json` and explain how to initialize the external database:
+如外部数据库不可用，使用内置 `data/exercise-library.json` 提供纯文本动作指导，并说明如何初始化外部数据库：
 ```bash
 python3 scripts/setup_exercise_db.py
 ```
 
-## Exercise Selection Rules
+## 动作选择规则
 
-When constructing a plan:
-1. Prefer movements that match the user's target body part, equipment, movement pattern, goal, and constraints.
-2. Apply load and equipment constraints from `references/training-algorithm-library.md`.
-3. Use coach-style preferences from `coach_profiles/*.md` to influence exercise choice (e.g., 凯圣王 prefers barbell compounds; 周六野 prefers bodyweight/dumbbell beginner-friendly movements).
-4. Do not replace an exercise only because progression is hard to calculate.
+构建计划时：
+1. 优先选择匹配用户目标身体部位、器械、运动模式、目标和限制的动作。
+2. 应用 `references/training-algorithm-library.md` 的负荷和器械约束。
+3. 使用 `coach_profiles/*.md` 的教练风格偏好影响动作选择（如凯圣王偏好杠铃复合动作；周六野偏好徒手/哑铃入门友好动作）。
+4. 不因进阶计算困难而替换动作。
 
-## Match Type Reporting
+## 匹配类型报告
 
-In the output, report exercise matching status:
-- **exact**: direct library match
-- **alias**: matched via curated alias
-- **substitution**: same-pattern replacement
-- **outside-library**: temporary, with reason stated
-- **ambiguous**: multiple candidates, needs user confirmation
-- **unmatched**: no library candidate, needs user guidance
+在输出中报告动作匹配状态：
+- **精确匹配**：直接库匹配
+- **别名匹配**：通过精选别名匹配
+- **替换**：同模式替换
+- **库外**：临时使用，说明原因
+- **模糊**：多个候选，需用户确认
+- **未匹配**：无库候选，需用户指导

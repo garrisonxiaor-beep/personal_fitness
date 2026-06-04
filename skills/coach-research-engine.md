@@ -1,43 +1,43 @@
-# Coach Research Engine
+# 教练调研增强引擎
 
-## When To Use
-Use when the user explicitly asks for newer public content, deeper coach-specific nuance, or Douyin / web augmentation.
+## 何时使用
+仅当用户明确要求更新公开内容、更深教练细节或抖音/网络增强时使用。
 
-## Trigger Rules
-Activate this layer only when the user clearly asks for public-web augmentation, such as:
-- 结合最近公开内容
-- 参考抖音看看
-- deepsearch 补强
-- 结合她最近公开内容再判断
+## 触发规则
+仅在用户明确提出公开网络增强请求时激活此层，例如：
+- "结合最近公开内容"
+- "参考抖音看看"
+- "deepsearch 补强"
+- "结合她最近公开内容再判断"
 
-Questions that do not clearly ask for public-web augmentation should stay on the static-profile path.
+未明确提出公开网络增强的问题应留在静态档案路径上。
 
-## Baseline-First Flow
-1. Read `coach_profiles/<coach>.md` first.
-2. Read `references/coach-style-guide.md` and `references/coach-research-policy.md`.
-3. If the user explicitly requested augmentation, read `coach_research_notes/<coach>.md` when available.
-4. Use research notes only to refine public-content nuance, examples, and recent emphasis.
-5. If a research note seems to conflict with the static profile, keep the static profile as authoritative and treat the research note as recency nuance only.
-6. Map the combined result back to coach recommendation, mixed-coach composition, or plan framing.
+## 静态优先流程
+1. 先读 `coach_profiles/<coach>.md`。
+2. 读 `references/coach-style-guide.md` 和 `references/coach-research-policy.md`。
+3. 如用户明确要求增强，读 `coach_research_notes/<coach>.md`（如有）。
+4. 仅用调研笔记细化公开内容细节、示例和近期重点。
+5. 如调研笔记与静态档案冲突，以静态档案为准，调研笔记仅作为时效性补充。
+6. 将合并结果映射回教练推荐、混搭组合或计划表达。
 
-## Allowed Refinements
-Research augmentation may refine:
-- recent public emphasis
-- recent content themes
-- recent session organization patterns
-- recent communication style
+## 允许的细化
+调研增强可细化：
+- 近期公开重点
+- 近期内容主题
+- 近期课程组织模式
+- 近期公开可见的沟通风格
 
-## Fallback Rules
-If no research note exists or no fresh public signal is available:
-- continue with the static profile
-- clearly frame the answer as static-profile-based
-- do not invent recent observations
-- do not block normal coach selection output
+## 降级规则
+如无调研笔记或无新鲜公开信号：
+- 继续使用静态教练档案回答
+- 明确标注回答基于静态档案
+- 不编造近期观察
+- 不阻塞正常教练选择输出
 
-## Boundaries
-Research augmentation does not override:
-- safety boundaries
-- scope limits
-- the core suitability model in the static profile
+## 边界
+调研增强不覆盖：
+- 安全边界
+- 范围限制
+- 静态档案中的核心适配模型
 
-Treat public-web and Douyin results as public-content observations, not medical advice, certification proof, or complete evidence of a coach's system.
+将公开网络和抖音结果视为公开内容观察，不是医学建议、认证证明或教练体系的完整证据。

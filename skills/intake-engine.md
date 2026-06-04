@@ -1,87 +1,87 @@
-# Intake Engine
+# 信息收集引擎
 
-## Modes
+## 模式
 
-### Quick Mode
-Use when the user wants fast guidance with minimal friction. Collect only the fields that materially change the next recommendation.
+### 快速模式
+当用户想以最小摩擦获取快速指导时使用。只收集实质影响下一步建议的字段。
 
-Minimum useful fields:
-- sex, age, height, weight
-- primary goal and time horizon
-- daily activity level
-- weekly training availability
-- equipment
+最少有用字段：
+- 性别、年龄、身高、体重
+- 主要目标和时间范围
+- 日常活动水平
+- 每周可用训练天数
+- 可用器械
 
-### Coach Mode
-Use when the user wants a structured plan, memory-aware coaching, or detailed trade-offs. Collect Quick Mode fields plus:
+### 教练模式
+当用户想要结构化计划、有记忆感知的教练或详细权衡时使用。收集快速模式字段外加上：
 
-- training background and training age
-- gym vs home preference
-- sleep quality and stress level
-- diet style and food preferences
-- eating-out frequency and tracking willingness
-- injuries, chronic issues, and hard boundaries
-- current obstacles and past failures
+- 训练背景和训练年限
+- 健身房还是居家偏好
+- 睡眠质量和压力水平
+- 饮食风格和食物偏好
+- 外食频率和追踪意愿
+- 伤病史、慢性问题或硬限制
+- 当前障碍和过去失败
 
-### Log-Analysis Mode
-Use when the user provides training logs, screenshots, body metrics, or nutrition records. Minimum fields depend on request type:
+### 日志分析模式
+当用户提供训练日志、截图、身体数据或营养记录时使用。最少字段取决于请求类型：
 
-| Request | Minimum useful fields |
+| 请求 | 最少有用字段 |
 |---|---|
-| Build first plan | Goal, weekly days, session length, training age, equipment, pain constraints |
-| Modify current plan | Current split, exercises, sets, reps, load, RPE/RIR, schedule, stated problem |
-| Analyze logs/screenshots | Date range, exercise names, sets/reps/load, body part or goal, recent trend |
-| Fat-loss/recomposition | Weight trend, waist/photos if available, steps/cardio, lifting plan, sleep |
-| Specialization | Target muscle, current weekly sets/frequency, target-muscle feel, joint tolerance |
-| Powerlifting/strength | Current SBD/e1RM or recent top sets, RPE accuracy, timeline, sticking points |
+| 构建首个计划 | 目标、每周天数、课程时长、训练年限、器械、疼痛限制 |
+| 修改当前计划 | 当前分化、动作、组数、次数、负荷、RPE/RIR、时间表、问题描述 |
+| 分析日志/截图 | 日期范围、动作名称、组/次数/负荷、部位或目标、近期趋势 |
+| 减脂/重塑 | 体重趋势、腰围/照片（如有）、步数/有氧、训练计划、睡眠 |
+| 部位专攻 | 目标肌群、当前每周组数/频率、目标肌肉感受、关节耐受度 |
+| 力量举/力量 | 当前 SBD/e1RM 或近期最大组、RPE 准确性、时间线、卡点 |
 
-## Coach Preference Intake
-Ask:
-- Do you want a specific coach style?
-- Do you want one coach for everything or different coaches for strength, cardio, and recovery?
-- Do you want to stay with the built-in profiles only, or should I also consider recent public content if needed?
+## 教练偏好收集
+询问：
+- 你想要特定的教练风格吗？
+- 你想要一个教练负责所有内容，还是力量、有氧和恢复用不同教练？
+- 你想只用内置档案，还是需要时我也可以参考最近的公开内容？
 
-## Profile Classification
+## 用户画像分类
 
-| Signal | Classification | Programming consequence |
+| 信号 | 分类 | 编程后果 |
 |---|---|---|
-| No consistent lifting history | New trainee | Start simple, moderate volume, technique first |
-| Returning after long break | Returning trainee | Use prior experience but lower initial volume/intensity |
-| 3+ months consistent logs | Consistent trainee | Use trend-based adjustments |
-| Performance down, sleep poor, soreness high | Fatigued trainee | Reduce volume/intensity before adding complexity |
-| Pain, numbness, sharp symptoms | Safety flag | Do not prescribe through symptom; advise reduction/evaluation |
-| Clear goal and reliable logs | Data-rich user | Make narrow, evidence-based changes |
-| Vague goal and no logs | Data-sparse user | Give conservative starting plan and ask for 2-4 weeks of logs |
+| 无稳定训练历史 | 新手 | 从简单开始，中等训练量，技术优先 |
+| 长期中断后回归 | 回归者 | 利用过往经验但降低初始训练量/强度 |
+| 3 个月以上持续日志 | 稳定训练者 | 基于趋势调整 |
+| 表现下降、睡眠差、酸痛高 | 疲劳训练者 | 先减量/强度再加复杂度 |
+| 疼痛、麻木、锐痛症状 | 安全标记 | 不透过症状开处方；建议减量/评估 |
+| 目标明确且日志可靠 | 数据丰富用户 | 做窄范围、基于证据的调整 |
+| 目标模糊且无日志 | 数据稀疏用户 | 给保守起始计划，要求 2-4 周日志 |
 
-## Missing Data Rule
+## 缺失数据规则
 
-Ask questions only when the missing answer changes the recommendation. Avoid large intake interviews unless the user wants a full setup.
+只在缺失答案会改变建议时才提问。除非用户想要完整设置，否则避免大型信息收集面谈。
 
-**Ask now when missing:**
-- Training days/session length for any plan construction
-- Equipment for exercise selection
-- Pain/injury when movement safety matters
-- Current plan/logs when the user asks "怎么修改"
-- Weight/waist trend when diagnosing fat-loss plateau
-- Current SBD or recent top sets when building powerlifting work
+**缺失时必须问：**
+- 任何计划构建的训练天数/课程时长
+- 动作选择的器械
+- 运动安全相关的疼痛/损伤
+- 用户问"怎么修改"时的当前计划/日志
+- 诊断减脂平台时的体重/腰围趋势
+- 构建力量举训练时的当前 SBD 或近期最大组
 
-**Do not block the answer when missing:**
-- Exact body fat percentage
-- Perfect diet details for a training-only request
-- Every exercise preference when a conservative first plan is enough
-- API data if the user already provided usable text/screenshots
+**缺失时不阻塞回答：**
+- 精确体脂百分比
+- 仅训练请求时的完美饮食细节
+- 保守起始计划够用时的每个动作偏好
+- 用户已提供可用文本/截图时的 API 数据
 
-## Required Fields (by priority)
+## 必填字段（按优先级）
 
-| Priority | Field | Why it matters |
+| 优先级 | 字段 | 为什么重要 |
 |---|---|---|
-| 1 | Primary goal and deadline | Determines goal module |
-| 2 | Current training status | New, returning, consistent, stalled, fatigued |
-| 3 | Weekly availability | Controls split choice and plan complexity |
-| 4 | Equipment and load jumps | Controls exercise selection and progression increments |
-| 5 | Current plan/logs | Best evidence for what to change |
-| 6 | Recovery and pain | Controls volume, intensity, deload, substitutions, safety gate |
-| 7 | Body metrics | Needed for fat loss/recomposition and visual shaping |
-| 8 | Preferences and must-keep movements | Improves adherence without breaking programming logic |
+| 1 | 主要目标和截止时间 | 决定目标模块 |
+| 2 | 当前训练状态 | 新手、回归、稳定、停滞、疲劳 |
+| 3 | 每周可用时间 | 控制分化选择和计划复杂度 |
+| 4 | 器械和负荷增量 | 控制动作选择和进阶增量 |
+| 5 | 当前计划/日志 | 改什么的最佳证据 |
+| 6 | 恢复和疼痛 | 控制训练量、强度、减载、替换、安全门控 |
+| 7 | 身体数据 | 减脂/重塑和视觉塑形需要 |
+| 8 | 偏好和必须保留的动作 | 在不破坏编程逻辑的前提下提高执行 |
 
-Read `references/intake-fields.md` for the full field list and `references/user-profile-intake.md` (to be added in Phase 3) for structured intake templates.
+阅读 `references/intake-fields.md` 获取完整字段列表，`references/user-profile-intake.md` 获取结构化收集模板。

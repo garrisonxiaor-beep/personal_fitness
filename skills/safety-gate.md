@@ -1,46 +1,46 @@
-# Safety Gate
+# 安全门控
 
-## Screening Triggers
+## 筛查触发条件
 
-Screen before giving a detailed training or nutrition plan.
+在给出详细训练或营养计划前进行筛查。
 
-### Hard stop: do not prescribe training through these symptoms
-- Sharp pain, numbness, radiating pain
-- Dizziness, fainting
-- Chest pain, severe unusual symptoms
-- Acute injury, post-op recovery, severe mobility limits
+### 硬停止：不要透过以下症状开训练处方
+- 锐痛、麻木、放射痛
+- 头晕、晕厥
+- 胸痛、严重异常症状
+- 急性损伤、术后恢复、严重活动受限
 
-Action: advise stopping or reducing the provocative activity and seeking professional medical or coaching evaluation. Do not diagnose.
+行动：建议停止或减少引发症状的活动，并寻求专业医疗或教练评估。不做诊断。
 
-### Escalate or narrow scope
-- Pregnancy or breastfeeding
-- Minors
-- Suspected eating-disorder patterns
-- Explicit disease-management requests
-- Crash-diet or extreme-deficit requests
+### 需升级或缩小范围
+- 孕期或哺乳期
+- 未成年人
+- 疑似进食障碍模式
+- 明确的疾病管理请求
+- 速效节食或极端缺口请求
 
-Action: keep guidance conservative and suggest in-person assessment when appropriate.
+行动：保持保守指导，适当时建议面诊评估。
 
-## Risk Levels
+## 风险等级
 
-| Level | Criteria | Action |
+| 等级 | 标准 | 行动 |
 |---|---|---|
-| **Low** | No red flags, general wellness goal | Full general recommendations |
-| **Caution** | Minor constraints, returning from injury, chronic but managed conditions | Conservative guidance; suggest professional assessment when appropriate |
-| **Out of scope** | Hard-stop symptoms, pregnancy, minors, eating-disorder patterns, disease management | Do not provide detailed prescriptions; direct to qualified professionals |
+| **低** | 无红旗信号，一般健康目标 | 完整通用建议 |
+| **谨慎** | 轻微限制、伤后恢复、慢性但已控制的情况 | 保守指导；适当时建议专业评估 |
+| **超范围** | 硬停止症状、孕期、未成年人、进食障碍模式、疾病管理 | 不提供详细处方；引导至合格专业人士 |
 
-## Response Rules
+## 响应规则
 
-1. Safety and scope always come before coaching style, calorie targets, exercise selection, or goal-module recommendations.
-2. Coach style cannot override safety boundaries. No coach profile may downplay or skip the safety gate.
-3. If a safety flag is raised during any workflow step, pause the normal flow and address it first.
-4. Mark uncertain screenshot extraction with confidence levels instead of treating values as exact.
-5. Distinguish facts from assumptions in all outputs.
+1. 安全和范围始终优先于教练风格、热量目标、动作选择或目标模块建议。
+2. 教练风格不能覆盖安全边界。任何教练档案都不得淡化或跳过安全门控。
+3. 如在任何工作流步骤中触发安全标记，暂停正常流程并先处理。
+4. 将不确定的截图提取标注为低置信度，而非将数值当作精确值。
+5. 在所有输出中区分事实与假设。
 
-## Screening Integration
+## 筛查集成
 
-The safety gate runs at these points in the workflow:
-- Before generating any detailed training or nutrition plan
-- Before recommending exercise substitutions when pain is mentioned
-- Before adjusting calorie targets when extreme deficit patterns are suspected
-- Before prescribing intensity increases when recovery signals are poor
+安全门控在工作流的以下节点运行：
+- 在生成任何详细训练或营养计划前
+- 在提及疼痛时推荐动作替换前
+- 在疑似极端缺口模式时调整热量目标前
+- 在恢复信号差时开出强度增加前

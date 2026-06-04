@@ -1,113 +1,113 @@
-# Adjustment Engine
+# 调整引擎
 
-## Core Principle
-Make the smallest change that solves the bottleneck. Do not rewrite the entire plan when a progression rule, volume adjustment, exercise order change, or deload is enough.
+## 核心原则
+做出解决瓶颈的最小改变。当进阶规则、训练量调整、动作顺序变更或减载就够用时，不要重写整个计划。
 
-Read `references/recommendation-decision-tree.md` for the full decision flow.
+阅读 `references/recommendation-decision-tree.md` 获取完整决策流程。
 
-## Decision Order
+## 决策顺序
 
-1. Safety: pain, red flags, medical symptoms
-2. Goal: hypertrophy, fat loss, specialization, powerlifting, mixed
-3. Data confidence: logs/body metrics exact, partial, or sparse
-4. Bottleneck diagnosis → primary action
-5. Action: choose one primary change and one optional secondary change
-6. Tracking: define 2-6 week evidence needed to reassess
+1. 安全：疼痛、红旗信号、医学症状
+2. 目标：增肌、减脂、专攻、力量举、混合
+3. 数据置信度：日志/身体数据是精确、部分还是稀疏
+4. 瓶颈诊断 → 主行动
+5. 行动：选择一个主改变和一个可选辅助改变
+6. 追踪：定义需要重新评估的 2-6 周证据
 
-## Bottleneck Diagnosis
+## 瓶颈诊断
 
-| Bottleneck | Signs | Primary action |
+| 瓶颈 | 迹象 | 主行动 |
 |---|---|---|
-| Under-stimulus | Recovery good, target not progressing, low volume/frequency | Add 1-2 sets/week or one exposure |
-| Over-fatigue | Multiple lifts down, soreness/sleep/joints poor | Reduce volume 20-40% or deload |
-| Technique mismatch | Target not felt, compensation rises | Change cues, load, exercise stability, or order |
-| Progression missing | Same work repeated with no rule | Add double progression or RPE-based progression |
-| Split mismatch | Schedule inconsistent, missed body parts | Change split to match days and adherence |
-| Exercise redundancy | Many same-slot exercises, poor tracking | Consolidate exercises and define slots |
-| Equipment mismatch | Planned loads impossible, machine jumps invalid | Adjust increments or choose same-slot available movement |
-| Fat-loss plateau | 2-3 weeks no average/waist/photo change with adherence | Add steps/cardio first, then small calorie cut |
-| Powerlifting weak point | Specific sticking point or lift lag | Add matching variation/accessory, not random volume |
-| Specialization need | One body part lags despite general plan | Run 4-8 week priority block and reduce non-target volume |
+| 刺激不足 | 恢复好，目标不进步，训练量/频率低 | 每周加 1-2 组或加一次暴露 |
+| 过度疲劳 | 多个动作下降，酸痛/睡眠/关节差 | 减量 20-40% 或减载 |
+| 技术不匹配 | 目标肌无感受，代偿增加 | 改变提示、负荷、动作稳定性或顺序 |
+| 缺少进阶 | 重复相同训练无规则 | 加入双重进阶或基于 RPE 的进阶 |
+| 分化不匹配 | 时间表不一致，遗漏肌群 | 改分化匹配天数和执行 |
+| 动作冗余 | 多个同位动作，追踪性差 | 合并动作，定义位置 |
+| 器械不匹配 | 计划负荷不可行，器械跳跃无效 | 调整增量或选择同位可用动作 |
+| 减脂平台 | 2-3 周平均/腰围/照片无变化且执行良好 | 先加步数/有氧，再小幅削减热量 |
+| 力量举弱项 | 具体卡点或某项滞后 | 加匹配的变式/附件，而非随机加量 |
+| 专攻需求 | 某肌群明显落后于整体计划 | 运行 4-8 周优先模块，减非目标训练量 |
 
-## Action Menu
+## 行动菜单
 
-### Keep plan
-Use when progress is occurring and fatigue is acceptable. Define next progression threshold.
+### 保持计划
+当进步在发生且疲劳可接受时使用。定义下一个进阶阈值。
 
-### Add reps or load
-When all sets hit the top of the rep range at target RPE/RIR:
-- Barbell main lifts: default +5 kg total
-- Dumbbells: default +2.5 kg per hand if rack unknown
-- Machines: default +5 kg, no decimals or unsupported 2.5 kg jumps
-- Shoulder isolations: reps/control/density before load
+### 加次数或负荷
+当所有组在目标 RPE/RIR 下达到次数范围上限时：
+- 杠铃主动作：默认 +5 kg 总量
+- 哑铃：架子增量未知时默认 +2.5 kg/手
+- 器械：默认 +5 kg，无小数或不受支持的 2.5 kg 跳跃
+- 肩部孤立：先加次数/控制/密度，再加负荷
 
-### Add volume or frequency
-When recovery is good and target stimulus is low:
-- Add 1-2 hard sets/week to target muscle
-- Add exposure before cramming all volume into one session
-- Reduce non-target volume if recovery conflict
+### 加训练量或频率
+当恢复好且目标刺激低时：
+- 每周给目标肌群加 1-2 硬组
+- 先加暴露频率，而非把所有量塞进一次训练
+- 如有恢复冲突则减非目标训练量
 
-### Reduce fatigue
-When performance or recovery is worsening:
-- Reduce sets 20-40% for 1 week
-- Keep movement but raise RIR by 1-2
-- Remove advanced techniques first
-- Deload if multiple fatigue signals exist
+### 减少疲劳
+当表现或恢复恶化时：
+- 减量 20-40% 持续 1 周
+- 保持动作但提高 RIR 1-2
+- 先移除高级技术
+- 如多个疲劳信号同时存在则减载
 
-### Change exercise
-Use when target muscle not loaded despite cue changes, equipment unavailable, pain/joint irritation, or progression stalled because the movement no longer fits. Do NOT use when the only reason is that progression is hard to calculate.
+### 更换动作
+当目标肌通过提示调整仍无感觉、器械不可用、疼痛/关节刺激、或动作已不适合用户时使用。不因进阶计算困难而更换动作。
 
-### Change split
-Use when user cannot adhere to current schedule, frequency is too low, session length is too long, or recovery cannot handle the split. Do NOT change just because another split sounds more advanced.
+### 更换分化
+当用户无法坚持当前时间表、频率太低、课程太长或恢复无法承受时使用。不因另一个分化听起来更高级而更换。
 
-### Run specialization
-When one or two target muscles are clear weak points and recovery can be reallocated:
-- Target muscle 12-24 hard sets/week
-- Non-target muscles 4-8 sets/week maintenance
-- Block length 4-8 weeks
-- Exit if target improves, recovery fails, pain rises, or progress stalls
+### 运行专攻
+当一两个目标肌群明显是弱项且恢复可重新分配时：
+- 目标肌群每周 12-24 硬组
+- 非目标肌群每周 4-8 组维持
+- 模块长度 4-8 周
+- 如目标改善、恢复失败、疼痛上升或进步停滞则退出
 
-### Deload
-When two or more are present: key lifts down repeatedly, soreness/joint irritation persists, sleep/recovery stress high, 4-8 hard weeks completed, or technique worsens under normal loads.
-Default: cut sets 30-50%, reduce load 5-15%, keep movement patterns, stay farther from failure.
+### 减载
+当以下两个或更多条件满足时：主项持续下降、酸痛/关节刺激持续、睡眠/恢复压力大、已持续高强度 4-8 周、或正常负荷下技术恶化。
+默认：减组 30-50%，减负荷 5-15%，保持运动模式，远离力竭。
 
-## Special Scenarios
+## 特殊场景
 
-### Travel And Overtime
-Collapse training to shorter maintainable sessions, preserve protein and movement minimums, and protect routine continuity.
+### 出差和加班
+将训练压缩为更短可维持的课程，保持蛋白质和运动底线，保护例程连续性。
 
-### Poor Sleep And Stress
-Lower training ambition, reduce recovery cost, and keep calorie deficits conservative.
+### 睡眠差和压力大
+降低训练野心，降低恢复成本，保持热量缺口保守。
 
-### Comeback After Breaks
-- < 7 days: normal progress, small increments possible
-- 7-14 days: reduce last training weight by 10-15%
-- 15-30 days: reduce 20-30%, increase warm-up and movement quality work
-- > 30 days: treat as re-activation, rebuild from baseline
+### 中断后恢复
+- < 7 天：正常进阶，可小幅递增
+- 7-14 天：降低上次训练重量的 10-15%
+- 15-30 天：降低 20-30%，增加热身和动作质量训练
+- > 30 天：视为重新激活，从基线重建
 
-### Fat-loss plateau
-1. Confirm adherence and tracking accuracy
-2. Check weekly average weight, waist, photos
-3. Add steps/cardio before cutting more food
-4. If fatigue is high, reduce training/cardio stress or use maintenance/diet break
+### 减脂平台
+1. 确认执行和追踪准确性
+2. 检查周均体重、腰围、照片
+3. 先加步数/有氧再加削减食物
+4. 如疲劳高，减训练/有氧压力或使用维持/饮食休息
 
-## Mixed-Coach Simplification Rule
-If recovery, adherence, or schedule quality drops, collapse the plan to one primary coach plus one support coach.
+## 混搭教练简化规则
+如恢复、执行或时间表质量下降，将计划压缩为一个主教练加一个辅助教练。
 
-## Load Constraints (must apply before output)
+## 负荷约束（输出前必须应用）
 
-Read `references/training-algorithm-library.md` for the full load and equipment constraints:
-- Fixed machines: 5 kg increments default
-- Barbell: no lower than 20 kg, main lifts +5 kg
-- Dumbbells: user's rack increments, assume +2.5 kg/hand
-- Shoulder isolations: progress reps/control/density before load
+阅读 `references/training-algorithm-library.md` 获取完整负荷和器械约束：
+- 固定器械：默认 5 kg 增量
+- 杠铃：不低于 20 kg，主动作 +5 kg
+- 哑铃：用户架子增量，未知时假设 +2.5 kg/手
+- 肩部孤立：先加次数/控制/密度再加负荷
 
-## Mixed-Goal Handling
+## 混合目标处理
 
-| Mixed goal | Primary logic | Secondary logic |
+| 混合目标 | 主逻辑 | 辅助逻辑 |
 |---|---|---|
-| Hypertrophy + fat loss | Fat-loss module if deficit/scale is central | Maintain hypertrophy stimulus and strength |
-| Hypertrophy + weak point | Hypertrophy split plus specialization insertion | Reduce non-target volume |
-| Powerlifting + hypertrophy | Powerlifting main lifts first | Accessories use hypertrophy/specialization rules |
-| Fat loss + powerlifting | Strength preservation and fatigue control | Avoid aggressive deficits near tests |
-| Body shaping + local weak point | Fat-loss/body-metric trend plus target muscle block | Do not promise local fat loss |
+| 增肌 + 减脂 | 减脂模块优先（如缺口/体重是中心） | 维持增肌刺激和力量 |
+| 增肌 + 弱项 | 增肌分化加专攻插入 | 减非目标训练量 |
+| 力量举 + 增肌 | 力量举主项优先 | 附件用增肌/专攻规则 |
+| 减脂 + 力量举 | 力量保持和疲劳控制 | 避免测试前激进缺口 |
+| 塑形 + 局部弱项 | 减脂/身体趋势加目标肌群模块 | 不承诺局部减脂 |

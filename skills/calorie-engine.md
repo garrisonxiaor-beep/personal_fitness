@@ -1,100 +1,100 @@
-# Calorie Engine
+# 热量引擎
 
-## Inputs
-Use sex, age, height, weight, and activity level as the minimum inputs. Use training frequency and goal to refine the recommendation range.
+## 输入
+以性别、年龄、身高、体重和活动水平为最少输入。用训练频率和目标细化建议范围。
 
-## Formula
+## 公式
 
-### Mifflin-St Jeor (BMR)
+### Mifflin-St Jeor（基础代谢率 BMR）
 
-**Male:** BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5
+**男性**：BMR = 10 × 体重(kg) + 6.25 × 身高(cm) − 5 × 年龄 + 5
 
-**Female:** BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161
+**女性**：BMR = 10 × 体重(kg) + 6.25 × 身高(cm) − 5 × 年龄 − 161
 
-### Activity Multipliers (TDEE)
+### 活动乘数（每日总消耗 TDEE）
 
-| Activity level | Multiplier |
+| 活动水平 | 乘数 |
 |---|---|
-| Sedentary (desk job, little exercise) | 1.2 |
-| Lightly active (1-3 days/week light exercise) | 1.375 |
-| Moderately active (3-5 days/week moderate exercise) | 1.55 |
-| Very active (6-7 days/week hard exercise) | 1.725 |
-| Extra active (athlete/physical job) | 1.9 |
+| 久坐（办公室，很少运动） | 1.2 |
+| 轻度活跃（每周 1-3 天轻度运动） | 1.375 |
+| 中度活跃（每周 3-5 天中等运动） | 1.55 |
+| 高度活跃（每周 6-7 天高强度运动） | 1.725 |
+| 极度活跃（运动员/体力劳动） | 1.9 |
 
-### Example Calculation
+### 计算示例
 
-Male, 30 years, 178 cm, 80 kg, moderately active (trains 4x/week):
+男性，30 岁，178 cm，80 kg，中度活跃（每周训练 4 次）：
 - BMR = 10 × 80 + 6.25 × 178 − 5 × 30 + 5 = 800 + 1112.5 − 150 + 5 = 1767.5
 - TDEE = 1767.5 × 1.55 ≈ 2740 kcal
 
-## Output Range Rules
+## 输出范围规则
 
-Return three values:
-1. **Estimated BMR** with the formula used
-2. **Estimated TDEE or TDEE range** with the activity multiplier range
-3. **Conservative calorie target range** when fat loss is the goal
+返回三个值：
+1. **估算 BMR** 及所用公式
+2. **估算 TDEE 或 TDEE 范围** 及活动乘数范围
+3. **保守热量目标范围**（减脂目标时）
 
-### Fat-loss deficit guidelines
+### 减脂缺口指南
 
-| Starting point | Weekly deficit | Expected weekly change |
+| 起点强度 | 每周缺口 | 预期每周变化 |
 |---|---|---|
-| Conservative start | 300-500 kcal below TDEE | 0.25-0.5 kg/week |
-| Moderate | 500-750 kcal below TDEE | 0.5-0.75 kg/week |
-| Maximum safe (not for everyone) | up to 750 kcal below TDEE | 0.75-1 kg/week |
+| 保守起步 | TDEE 以下 300-500 kcal | 0.25-0.5 kg/周 |
+| 中等 | TDEE 以下 500-750 kcal | 0.5-0.75 kg/周 |
+| 最大安全（不适合所有人） | TDEE 以下最多 750 kcal | 0.75-1 kg/周 |
 
-Never recommend deficits below 1200 kcal (female) or 1500 kcal (male) without medical supervision.
+无医疗监督时，绝不推荐女性低于 1200 kcal 或男性低于 1500 kcal 的缺口。
 
-### Muscle-gain surplus guidelines
+### 增肌盈余指南
 
-| Level | Surplus | Expected monthly change |
+| 级别 | 盈余 | 预期每月变化 |
 |---|---|---|
-| Lean bulk | 200-300 kcal above TDEE | 0.5-1 kg/month (mostly muscle) |
-| Standard bulk | 300-500 kcal above TDEE | 1-2 kg/month (some fat) |
+| 精益增肌 | TDEE 以上 200-300 kcal | 0.5-1 kg/月（主要是肌肉） |
+| 标准增肌 | TDEE 以上 300-500 kcal | 1-2 kg/月（含一些脂肪） |
 
-### Recomposition
-Start at approximately TDEE or a small 100-200 kcal deficit. Monitor bodyweight stability + waist/visual improvement.
+### 重塑
+从大约 TDEE 或 100-200 kcal 小缺口开始。监测体重稳定性 + 腰围/视觉改善。
 
-## Macro Distribution from Calorie Target
+## 从热量目标到宏量分配
 
-Once total calories are set, distribute to macros using `skills/nutrition-engine.md` for goal-specific targets.
+总热量确定后，使用 `skills/nutrition-engine.md` 的目标特定参数分配宏量营养素。
 
-### Quick allocation method
+### 快速分配法
 
-1. Set protein first: goal × bodyweight (kg) = protein grams × 4 = protein calories
-2. Set fat floor: 0.7-1.0 g/kg × bodyweight (kg) = fat grams × 9 = fat calories
-3. Remaining calories → carbs (divide by 4 for grams)
+1. 先定蛋白质：目标 × 体重(kg) = 蛋白质克数 × 4 = 蛋白质热量
+2. 定脂肪底线：0.7-1.0 g/kg × 体重(kg) = 脂肪克数 × 9 = 脂肪热量
+3. 剩余热量 → 碳水（除以 4 得克数）
 
-### Example
+### 示例
 
-Male, 80 kg, fat loss, TDEE 2740, target 2240 kcal (500 deficit):
-- Protein: 2.0 g/kg × 80 = 160 g × 4 = 640 kcal
-- Fat: 0.8 g/kg × 80 = 64 g × 9 = 576 kcal
-- Remaining: 2240 − 640 − 576 = 1024 kcal → 256 g carbs
+男性，80 kg，减脂，TDEE 2740，目标 2240 kcal（500 缺口）：
+- 蛋白质：2.0 g/kg × 80 = 160 g × 4 = 640 kcal
+- 脂肪：0.8 g/kg × 80 = 64 g × 9 = 576 kcal
+- 剩余：2240 − 640 − 576 = 1024 kcal → 256 g 碳水
 
-### Adjustment priority
+### 调整优先级
 
-When adjusting calories:
-1. **Increase deficit**: reduce carbs first, keep protein and fat stable
-2. **Increase surplus**: add carbs first, small fat increase if needed
-3. **Never cut protein to save calories** during any deficit
-4. **Do not push fats below 0.6 g/kg** without medical supervision
+调整热量时：
+1. **增大缺口**：先减碳水，保持蛋白质和脂肪稳定
+2. **增大盈余**：先加碳水，小幅加脂肪（如需）
+3. **任何缺口期间绝不削减蛋白质来省热量**
+4. **无医疗监督时不将脂肪推低至 0.6 g/kg 以下**
 
-## Safety Limits
+## 安全限制
 
-- Do not present estimates as exact. Always state uncertainty.
-- Avoid extreme deficits or aggressive weekly loss targets.
-- Never claim medical certainty or guaranteed body composition outcomes.
-- If the user is in a safety-flag category (see `skills/safety-gate.md`), keep calorie guidance conservative and recommend professional assessment.
-- Adjust calorie targets for recovery: if sleep, stress, or performance are poor, do not increase deficit.
+- 不将估算呈现为精确值。始终声明不确定性。
+- 避免极端缺口或激进的每周减重目标。
+- 绝不声称医学确定性或保证的身体成分结果。
+- 如用户处于安全标记类别（见 `skills/safety-gate.md`），保持热量指导保守并建议专业评估。
+- 根据恢复调整热量目标：如睡眠、压力或表现差，不增加缺口。
 
-## Coach Style Modifiers
+## 教练风格修饰
 
-| Coach | Calorie framing | Tracking expectation |
+| 教练 | 热量表达 | 追踪期望 |
 |---|---|---|
-| 凯圣王×谭指导 | Structured macro targets, precise tracking | 期望追踪宏量营养素 |
-| 周六野 | Simple portion control, gentle deficit | 关注份量，不强调追踪 |
-| Pamela Reif | Efficient lean eating, precision but not rigid | 高效记录，不过度纠结 |
-| Coffee Lam | Light, recovery-friendly food rhythm | 不强调严格追踪 |
-| 欧阳春晓 | Shaping-oriented, not extreme, moderate deficit | 简单记录 |
-| 韩小四 | Simplest possible guidance, "eat a bit less" | 完全不追踪，只管少吃 |
-| 海洋饼干 | Training-and-diet coordination, practical meal defaults | 中等记录，外食有默认选择 |
+| 凯圣王×谭指导 | 结构化宏量目标，精确追踪 | 期望追踪宏量营养素 |
+| 周六野 | 简单份量控制，温和缺口 | 关注份量，不强调追踪 |
+| Pamela Reif | 高效精简饮食，精确但不rigid | 高效记录，不过度纠结 |
+| Coffee Lam | 轻负担、恢复友好的饮食节奏 | 不强调严格追踪 |
+| 欧阳春晓 | 塑形导向，不极端，温和缺口 | 简单记录 |
+| 韩小四 | 最简指导，"少吃一点就好" | 完全不追踪，只管少吃 |
+| 海洋饼干 | 训练+饮食联动，实用默认选择 | 中等记录，外食有默认选择 |
