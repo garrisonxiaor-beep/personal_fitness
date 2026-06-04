@@ -118,6 +118,48 @@ Accept any of these inputs:
 14. **Update memory.**
     Use `skills/memory-engine.md` and `skills/adjustment-engine.md`. Save durable facts to profile, recent observations to progress notes.
 
+## Quality Checks
+
+Before finalizing any output, verify every item below. If any check fails, fix the output before presenting it to the user.
+
+### Goal and Safety
+
+1. **Goal alignment**: The recommendation matches the user's stated goal and available schedule/equipment. If goals are mixed, state the primary and secondary goal.
+2. **Correct module**: The correct goal module was selected (`goal-hypertrophy.md`, `goal-fat-loss-recomposition.md`, `goal-specialization.md`, or `goal-powerlifting.md`).
+3. **Safety screening**: Safety screening was considered and no medical diagnosis was made. If a safety flag was raised, the output addresses it before giving training or nutrition advice.
+
+### Training Consistency
+
+4. **Internal consistency**: Weekly volume, frequency, intensity, and progression are internally consistent. (e.g., do not recommend 20 hard sets/week for a beginner, or 6 days/week for someone who said 3 days.)
+5. **Load constraints**: Load recommendations obey equipment increments from `references/training-algorithm-library.md`:
+   - No machine decimal weights or unsupported 2.5 kg machine jumps
+   - No barbell weight below 20 kg
+   - Main barbell lifts default to +5 kg total jumps
+   - Dumbbells follow rack increments; assume +2.5 kg/hand when unknown
+   - Long-lever shoulder isolations do not jump linearly from 35 kg directly to 40 kg+
+6. **Exercise library**: Selected exercises come from `data/exercise-library.json` when suitable. If using an outside-library exercise, state why the built-in library was insufficient.
+7. **Exercise matching integrity**: Missing exercise handling did not silently invent a library match. Say whether the exercise was matched (exact/alias/near-name), substituted, or temporarily used outside the library.
+8. **No lazy substitutions**: No exercise was avoided or replaced only because progression was hard to calculate. Substitutions must be user-chosen, equipment-driven, or safety-driven; state the reason.
+
+### Decision Logic
+
+9. **Facts vs assumptions**: The output distinguishes known data from assumptions. If screenshot or file extraction is uncertain, mark uncertain values instead of treating them as exact.
+10. **Concrete next actions**: The plan includes concrete next actions for the next workout or week (specific exercises, sets, reps, load targets, or measurable behavior changes).
+11. **Bottleneck named**: The bottleneck was named before changing the plan: under-stimulus, over-fatigue, technique mismatch, adherence, recovery, equipment, goal mismatch, or missing data. Do not change the plan without identifying the reason.
+12. **Smallest useful change**: The recommendation uses the smallest useful change. If keeping most of the plan, explicitly state what is NOT changing.
+13. **Fatigue management**: Fatigue management exists: deload triggers, volume reduction, exercise swap, or recovery adjustment when needed. Do not recommend continuous hard training without a deload plan.
+
+### Nutrition
+
+14. **Nutrition supports training**: Nutrition guidance, if included, supports training decisions and avoids extreme deficits or medical claims. Protein floor is met before any other macro optimization. Calorie deficit does not go below 1200 kcal (female) or 1500 kcal (male) without medical supervision.
+
+### Coach Style Consistency
+
+15. **Coach style applied consistently**: The selected coach style is applied consistently across training, nutrition, and tone. If the user chose mixed-coach mode, each domain uses the correct coach overlay.
+16. **Coach style does not override safety**: No coach profile overrides safety boundaries, load constraints, calorie floors, or scope limits. If a coach style would suggest something unsafe, the safe recommendation takes priority and the conflict is noted.
+17. **Coach style matches user level**: The coach style is appropriate for the user's training level (e.g., do not apply 凯圣王×谭指导 advanced split to a complete beginner; do not apply 韩小四 ultra-simple framing to an experienced trainee asking for powerlifting periodization).
+18. **Coach style is visible in output**: The output reflects the coach style in at least two of: exercise selection, session pacing, nutrition framing, or communication tone. If the style is invisible, it was not applied.
+
 ## Boundaries
 
 - Coach style changes tone and emphasis, never safety boundaries.
