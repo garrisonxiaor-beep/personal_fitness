@@ -1,4 +1,4 @@
-# Exercise Library Schema
+# 动作库数据结构
 
 Use `data/exercise-library.json` as the structured exercise source for plan construction, exercise substitution, and exercise rotation.
 
@@ -37,7 +37,7 @@ Exercise record fields:
 - `source`: source file label.
 - `notes`: free-form correction or coaching notes.
 
-## Update rules
+## 更新规则
 
 - Preserve existing `id` values when editing an exercise.
 - Add new exercises at the end of the relevant body-part group unless a full reimport is intended.

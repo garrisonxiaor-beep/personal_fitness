@@ -1,6 +1,6 @@
-# Coach Style Guide
+# 教练风格指南
 
-## Core Rule
+## 核心规则
 Coach style changes tone and emphasis, never safety boundaries.
 
 ## Suggested Coach Styles

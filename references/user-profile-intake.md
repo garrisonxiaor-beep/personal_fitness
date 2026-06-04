@@ -1,12 +1,12 @@
-# User Profile Intake
+# 用户档案收集
 
 Use this reference when the user is new, gives initial data, asks "我该怎么开始", provides scattered personal details, or the request needs profile, schedule, equipment, constraints, and goal context before program analysis.
 
-## Purpose
+## 目的
 
 Convert messy initial user information into a compact coaching profile. Ask only for missing fields that materially change the next decision.
 
-## Intake priority
+## 收集优先级
 
 | Priority | Field | Why it matters |
 |---|---|---|
@@ -19,7 +19,7 @@ Convert messy initial user information into a compact coaching profile. Ask only
 | 7 | Body metrics | Needed for fat loss/recomposition and visual shaping. |
 | 8 | Preferences and must-keep movements | Improves adherence without breaking programming logic. |
 
-## Required fields by request type
+## 各请求类型所需最少字段
 
 | Request | Minimum useful fields |
 |---|---|
@@ -30,7 +30,7 @@ Convert messy initial user information into a compact coaching profile. Ask only
 | Specialization | Target muscle, current weekly sets/frequency, target-muscle feel, joint tolerance. |
 | Powerlifting/strength | Current SBD/e1RM or recent top sets, RPE accuracy, timeline, sticking points. |
 
-## Profile classification
+## 用户画像分类
 
 | Signal | Classification | Programming consequence |
 |---|---|---|
@@ -42,7 +42,7 @@ Convert messy initial user information into a compact coaching profile. Ask only
 | Clear goal and reliable logs | Data-rich user | Make narrow, evidence-based changes. |
 | Vague goal and no logs | Data-sparse user | Give conservative starting plan and ask for 2-4 weeks of logs. |
 
-## Missing data policy
+## 缺失数据策略
 
 Ask questions only when the missing answer changes the recommendation. Avoid large intake interviews unless the user wants a full setup.
 
@@ -62,7 +62,7 @@ Do not block the answer when missing:
 - Every exercise preference when a conservative first plan is enough.
 - API data if the user already provided usable text/screenshots.
 
-## Input normalization
+## 输入规范化
 
 Normalize user data into this internal structure:
 
@@ -82,7 +82,7 @@ unknowns:
 assumptions:
 ```
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

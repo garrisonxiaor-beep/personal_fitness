@@ -168,7 +168,7 @@ Rules:
 | Performance drops for two weeks | Recovery insufficient or volume jumped too fast | Reduce 20-30% volume or deload. |
 | Target recovers and performance improves | Continue progression | Add reps, then sets, then load. |
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

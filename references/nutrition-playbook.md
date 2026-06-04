@@ -1,4 +1,4 @@
-# Nutrition Playbook
+# 营养实操手册
 
 Quick-reference rules for nutrition decisions. For detailed strategies, read `references/nutrition-advanced.md`.
 

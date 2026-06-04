@@ -37,7 +37,7 @@ Read `fat-loss-recomposition-advanced.md` when the request involves:
 - Second win: small rep or load increases on key lifts.
 - If performance drops sharply, reduce cardio, reduce lifting volume slightly, or improve recovery before adding more work.
 
-## Adjustment rules
+## 调整规则
 
 - If weight/waist does not trend down and adherence is good, add small activity or nutrition adjustments rather than cutting training quality.
 - If strength drops for 2+ sessions, reduce accessory volume or conditioning before changing key lifts.

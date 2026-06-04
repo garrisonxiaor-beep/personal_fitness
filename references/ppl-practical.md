@@ -316,7 +316,7 @@ Migration rule: when the user's base is insufficient, prioritize moderate volume
 | Weak point unknown | Use balanced PPL without extra specialization. |
 | Equipment unknown | Offer free-weight, machine, and cable substitutions. |
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

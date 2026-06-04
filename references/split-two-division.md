@@ -191,7 +191,7 @@ Four-week microcycle plus deload:
 | Copying high-level low-volume training | Build execution control and target-muscle feel first. |
 | Only tracking load | Track load, reps, RIR, range, pain, and recovery. |
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

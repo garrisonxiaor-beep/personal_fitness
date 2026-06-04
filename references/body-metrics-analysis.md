@@ -1,12 +1,12 @@
-# Body Metrics Analysis
+# 身体数据分析
 
 Use this reference when the user provides bodyweight, waist, measurements, progress photos, body composition estimates, sleep, steps, cardio, or asks whether fat loss, recomposition, body shaping, or a visual change is working.
 
-## Purpose
+## 目的
 
 Turn body metrics into trend decisions without overreacting to daily fluctuations.
 
-## Metrics to extract
+## 提取的指标
 
 ```text
 date:
@@ -24,7 +24,7 @@ hunger:
 cycle/water/sodium notes:
 ```
 
-## Reliability
+## 可靠性
 
 | Metric | Reliability rule |
 |---|---|
@@ -35,7 +35,7 @@ cycle/water/sodium notes:
 | Single-day weight spike | Usually water/glycogen/sodium/stool, not fat gain. |
 | Training performance | Critical for muscle retention during cuts. |
 
-## Trend windows
+## 趋势窗口
 
 | Time window | Interpretation |
 |---|---|
@@ -45,7 +45,7 @@ cycle/water/sodium notes:
 | 4-8 weeks | Good window for recomposition and visual trend. |
 | 8-12 weeks | Good point for full phase review or diet break/maintenance decision. |
 
-## Fat-loss interpretation
+## 减脂解读
 
 | Pattern | Interpretation | Action |
 |---|---|---|
@@ -56,7 +56,7 @@ cycle/water/sodium notes:
 | Weight unchanged 2-3 weeks, waist/photo unchanged, adherence good | Likely plateau | Follow plateau order from fat-loss reference. |
 | Weight up after salty meal/leg day | Water retention likely | Wait and use weekly average. |
 
-## Recomposition interpretation
+## 重塑解读
 
 Recomposition may be occurring when:
 
@@ -68,7 +68,7 @@ Recomposition may be occurring when:
 
 Do not force aggressive scale loss if the user wants body shaping and recomposition signals are positive.
 
-## Measurement standards
+## 测量标准
 
 | Metric | Standard |
 |---|---|
@@ -78,7 +78,7 @@ Do not force aggressive scale loss if the user wants body shaping and recomposit
 | Limb/chest/hip measurements | Same tape tension and landmark. |
 | Strength | Compare same exercise, similar technique, similar RPE/RIR. |
 
-## Visual shaping checks
+## 视觉塑形检查
 
 | Goal | Useful signals |
 |---|---|
@@ -88,9 +88,9 @@ Do not force aggressive scale loss if the user wants body shaping and recomposit
 | Glute/leg shape | Hip/thigh measurements, posterior-chain training, photos. |
 | Abs/lines | Waist, body fat trend, abdominal training consistency. |
 
-## Adjustment logic
+## 调整逻辑
 
-Fat loss:
+减脂:
 
 1. Confirm adherence and tracking accuracy.
 2. Check weekly average weight, waist, photos.
@@ -99,7 +99,7 @@ Fat loss:
 5. If plateau is real, increase steps/cardio before cutting more food.
 6. If fatigue is high, reduce training/cardio stress or use maintenance/diet break.
 
-Hypertrophy:
+增肌:
 
 1. Check target muscle measurements/photos and training progression.
 2. If bodyweight is not rising and strength/measurements stall, food may be too low.
@@ -112,7 +112,7 @@ Powerlifting:
 2. Cutting too fast can reduce SBD performance.
 3. Near meet/test day, bodyweight manipulation should be conservative unless the user explicitly has a weight-class plan.
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

@@ -1,13 +1,13 @@
-# Research Source Rules
+# 调研来源规则
 
-## Allowed Source Framing
+## 允许的来源描述
 Public-web and Douyin results may be used as:
 - public-content signals
 - style and emphasis observations
 - example-enhancement inputs
 - recent-theme observations
 
-## Disallowed Claims
+## 不允许的声明
 Do not use public samples as proof of:
 - medical advice
 - coaching certification or professional status
@@ -15,7 +15,7 @@ Do not use public samples as proof of:
 - private-life facts
 - guaranteed body-shaping outcomes
 
-## Usage Rules
+## 使用规则
 - Static `coach_profiles/*.md` stay primary.
 - Research notes are optional augmentation only and should only be used when the user explicitly asks for public-web / Douyin / recent-content nuance.
 - If the public sample is narrow, old, or weak, reduce confidence.

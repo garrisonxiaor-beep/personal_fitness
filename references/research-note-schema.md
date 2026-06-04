@@ -1,9 +1,9 @@
-# Research Note Schema
+# 调研笔记结构
 
-## Purpose
+## 目的
 Use this schema for files under `coach_research_notes/<coach>.md` that capture optional public-content augmentation for a named coach.
 
-## Required Sections
+## 必填章节
 Every research note should contain:
 - `# <Coach Name> Research Augmentation`
 - `## Research Status`
@@ -12,14 +12,14 @@ Every research note should contain:
 - `## Source Caveats`
 - `## Integration Notes`
 
-## Freshness and Confidence Fields
+## 新鲜度和置信度字段
 Under `## Research Status`, include:
 - `source mode: public-web` or `source mode: douyin+public-web`
 - `freshness: YYYY-MM-DD`
 - `confidence: low / medium / high`
 - `usage: optional augmentation only`
 
-## Writing Rules
+## 写作规则
 - Write directional observations, not absolute truths.
 - Do not claim medical authority, certification, or complete methodology from public samples.
 - Keep static `coach_profiles/*.md` as the baseline.

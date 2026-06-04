@@ -1,31 +1,31 @@
-# Segmentation Rules
+# 分段规则
 
-## Goal Segments
-- fat loss
-- maintenance
-- recomposition
-- muscle gain
+## 目标分段
+- 减脂
+- 维持
+- 重塑
+- 增肌
 
-## Activity Segments
-- sedentary
-- lightly active
-- moderately active
-- highly active
+## 活动分段
+- 久坐
+- 轻度活跃
+- 中度活跃
+- 高度活跃
 
-## Training Segments
-- beginner
-- intermediate
-- experienced
+## 训练分段
+- 新手
+- 进阶
+- 有经验
 
-## Adherence Segments
-- low
-- medium
-- high
+## 执行分段
+- 低
+- 中
+- 高
 
-## Risk Segments
-- low
-- caution
-- out of scope
+## 风险分段
+- 低
+- 谨慎
+- 超范围
 
-## Application Rule
-Use segmentation to decide plan complexity, training frequency, calorie aggressiveness, and whether advanced strategies are appropriate.
+## 应用规则
+使用分段决定计划复杂度、训练频率、热量激进程度以及是否适合高级策略。

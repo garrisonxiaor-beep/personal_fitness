@@ -200,7 +200,7 @@ Deload when:
 - Pump and target-muscle feel fall while compensation rises.
 - Weak-point volume creates systemic fatigue.
 
-## Decision rules
+## 决策规则
 
 Use the order: training age -> time availability -> equipment -> goal -> weak point -> recovery.
 
@@ -222,7 +222,7 @@ Use the order: training age -> time availability -> equipment -> goal -> weak po
 | Lateral raise compensation | Cable, machine, or seated lateral raise | Reduce cheating and improve side-delt tension. |
 | Elbow discomfort | Cable curl/pressdown, neutral grip, less close-grip pressing | Reduce joint stress. |
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

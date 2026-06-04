@@ -1,16 +1,20 @@
-# Coach Research Policy
+# 教练调研策略
 
-## Default Source Of Truth
-Static repository coach profiles are primary.
+## 默认事实来源
+静态仓库教练档案是主要的。
 
-## Trigger Rules
-Only use coach research augmentation when the user explicitly asks for recent public content, newer trends, Douyin / web nuance, or deeper coach-specific detail.
+## 触发规则
+仅在用户明确要求更新公开内容、更新趋势或更深教练细节时使用教练调研增强。
 
-## How To Use Results
-Treat results as public-content observations that can refine examples, exercise choices, recent emphasis, or style notes. Do not treat them as medical advice, certification claims, or full methodology proof.
+## 如何使用结果
+将结果视为可细化示例、动作选择、近期重点或风格笔记的公开内容观察。不视为医学或正式认证声明。
 
-## Fallback Rules
-If no research note exists or no usable public signal is available, answer from the static coach profile and clearly say the result is static-profile-based.
+## 降级规则
+如无调研笔记或无可用公开信号：
+- 继续使用静态教练档案回答
+- 明确标注回答基于静态档案
+- 不编造近期观察
+- 不阻塞正常教练选择输出
 
-## Freshness Rules
-Research notes should carry freshness metadata. Older notes may still be used, but confidence should be reduced and possible drift should be acknowledged.
+## 新鲜度规则
+调研笔记应携带新鲜度元数据。较旧的笔记仍可使用，但应降低置信度并承认可能的偏移。

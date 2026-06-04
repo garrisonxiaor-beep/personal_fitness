@@ -36,7 +36,7 @@ Read `specialization-advanced.md` when the request involves:
 - Then progress reps, load, density, pauses, range of motion, or set count.
 - Avoid chasing load if it shifts tension away from the target muscle.
 
-## Adjustment rules
+## 调整规则
 
 - Reduce non-priority volume before adding more total weekly training.
 - Stop adding target sets if soreness lingers, joints complain, or target performance drops.

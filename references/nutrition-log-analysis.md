@@ -1,14 +1,14 @@
-# Nutrition Log Analysis
+# 营养日志分析
 
 Use this reference when the user provides diet records, meal logs, calories, macros, protein intake, hunger, adherence, or asks how diet should support hypertrophy, fat loss, recomposition, specialization, strength, or powerlifting.
 
 Do not use this skill for nutrition-only lookup when there is no training or body-composition decision.
 
-## Purpose
+## 目的
 
 Turn nutrition logs into training-relevant decisions without pretending to be a medical dietitian or exact food database.
 
-## Supported inputs
+## 支持的输入
 
 - Text meal logs.
 - CSV, JSON, spreadsheet, or app export with calories/macros.
@@ -33,11 +33,11 @@ adherence:
 notes:
 ```
 
-## Script support
+## 脚本支持
 
 Use `scripts/manage_user_data.py import-nutrition` to save nutrition records into `nutrition-history.json`. Use `scripts/manage_user_data.py summary` for daily averages and recent totals.
 
-## Reliability
+## 可靠性
 
 | Evidence | Use |
 |---|---|
@@ -47,7 +47,7 @@ Use `scripts/manage_user_data.py import-nutrition` to save nutrition records int
 | Bodyweight trend without intake | Use body metrics first, infer diet cautiously |
 | Screenshot food logs | Extract but mark uncertainty |
 
-## Decision rules
+## 决策规则
 
 | Pattern | Likely interpretation | Training-relevant action |
 |---|---|---|
@@ -58,7 +58,7 @@ Use `scripts/manage_user_data.py import-nutrition` to save nutrition records int
 | Inconsistent weekdays/weekends | Adherence issue | Use weekly average, not single-day correction |
 | Carbs very low around hard sessions | Performance support issue | Place carbs around key training when appropriate |
 
-## Macro guidance
+## 宏量营养素指南
 
 Use ranges and context, not rigid prescriptions:
 
@@ -68,7 +68,7 @@ Use ranges and context, not rigid prescriptions:
 - Fats: avoid pushing extremely low; do not make medical claims.
 - Fiber and hydration: use as adherence and hunger context.
 
-## Output requirements
+## 输出要求
 
 Include:
 

@@ -1,8 +1,8 @@
-# Training Algorithm Library
+# 训练算法库
 
 Use this reference when turning user fitness data into a program decision. Treat all values as coaching ranges, not medical prescriptions.
 
-## Data hierarchy
+## 数据层级
 
 Prefer evidence in this order:
 
@@ -11,13 +11,13 @@ Prefer evidence in this order:
 3. Stated goal, schedule, equipment, and preferences.
 4. General programming ranges below.
 
-## Safety gate
+## 安全门控
 
 Stop normal programming and give a safety-first answer when the user reports sharp pain, numbness, radiating pain, dizziness, fainting, chest pain, or severe unusual symptoms. Do not diagnose. Recommend stopping or reducing the provocative movement and seeking professional medical or coaching evaluation.
 
 Also screen for pregnancy, breastfeeding, minors, acute injury, post-op recovery, severe mobility limits, disease-management requests, suspected eating-disorder patterns, and crash-diet or extreme-deficit requests. See `skills/safety-gate.md` for the full screening protocol.
 
-## Goal modules
+## 目标模块
 
 Use the dedicated goal modules for detailed programming:
 
@@ -28,7 +28,7 @@ Use the dedicated goal modules for detailed programming:
 
 This file only holds shared rules that apply across all goals.
 
-## Load and equipment constraints
+## 负荷和器械约束
 
 These are hard constraints. Apply them after choosing exercises and before outputting any planned load or progression.
 
@@ -39,9 +39,9 @@ These are hard constraints. Apply them after choosing exercises and before outpu
 - Long-lever shoulder isolations, especially standing machine lateral raise, must not jump linearly from 35 kg directly to 40 kg or above. Progress reps, drop sets, tempo/control, pause quality, or rest-density before load.
 - Do not replace an exercise only because the algorithm has difficulty calculating its progression. Same-slot substitutions are allowed only when the user chooses them, the equipment is unavailable, or a safety/pain constraint requires it; state the reason.
 
-## Adjustment rules
+## 调整规则
 
-### Add stimulus when recovery is good
+### 恢复良好时增加刺激
 
 If performance is stable or rising, soreness is manageable, and the target muscle is not progressing, choose one:
 
@@ -50,7 +50,7 @@ If performance is stable or rising, soreness is manageable, and the target muscl
 - Add reps within the current range.
 - Add load only after reps and technique meet the rule.
 
-### Reduce fatigue when recovery is poor
+### 恢复差时减少疲劳
 
 If performance drops for 2+ sessions, motivation is low, soreness lingers, sleep is poor, or joints feel irritated, choose one:
 
@@ -59,7 +59,7 @@ If performance drops for 2+ sessions, motivation is low, soreness lingers, sleep
 - Swap the painful or stale exercise for a close variation.
 - Add a deload before starting a new block.
 
-### Deload triggers
+### 减载 triggers
 
 Use a deload when two or more are present:
 
@@ -71,7 +71,7 @@ Use a deload when two or more are present:
 
 Deload options: cut sets by 30-50%, reduce load by 5-15%, keep movement patterns, and stop sets farther from failure.
 
-## Plan construction
+## 计划构建
 
 1. Set weekly training days and session length first.
 2. Assign split by goal and availability: full body for 2-3 days, upper/lower for 4 days, PPL or specialization split for 5-6 days.
@@ -86,6 +86,6 @@ Training algorithm rules are goal-driven and evidence-based. Coach style modifie
 
 See `references/coach-style-guide.md` and `coach_profiles/*.md` for how each coach style modifies plan presentation.
 
-## Output calibration
+## 输出校准
 
 When data is sparse, give a conservative starting plan and ask for logs after 2-4 weeks. When data is rich, explain the specific trend and make narrower changes.

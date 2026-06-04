@@ -1,13 +1,13 @@
-# Training Playbook
+# 训练实操手册
 
-## Baseline Rule
-Consistency and recovery come before complexity.
+## 基线规则
+一致性和恢复优先于复杂度。
 
-## Sedentary Beginner Default
-Use 2-3 simple resistance sessions and step-target progression.
+## 久坐新手默认
+每周 2-3 次简单阻力训练 + 步数目标递进。
 
-## General Fat-Loss Default
-Use 3-4 resistance sessions, manageable cardio, and movement targets.
+## 一般减脂默认
+每周 3-4 次阻力训练 + 适度有氧 + 运动目标。
 
-## Experienced Default
-Use more structured progression, split logic, and exercise selection when recovery supports it.
+## 有经验训练者默认
+更多结构、进阶和目标特定动作选择（当恢复和执行支持时）。

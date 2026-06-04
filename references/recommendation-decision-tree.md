@@ -1,12 +1,12 @@
-# Recommendation Decision Tree
+# 推荐决策树
 
 Use this reference after profile, training-log, body-metric, and goal-module analysis to choose the smallest useful recommendation: keep, progress, add volume, reduce fatigue, change exercise, change split, run specialization, deload, or ask for missing data.
 
-## Primary rule
+## 主要原则
 
 Make the smallest change that solves the bottleneck. Do not rewrite the entire plan when a progression rule, volume adjustment, exercise order change, or deload is enough.
 
-## Decision order
+## 决策顺序
 
 1. Safety: pain, red flags, medical symptoms.
 2. Goal: hypertrophy, fat loss, specialization, powerlifting, mixed.
@@ -15,7 +15,7 @@ Make the smallest change that solves the bottleneck. Do not rewrite the entire p
 5. Action: choose one primary change and one optional secondary change.
 6. Tracking: define 2-6 week evidence needed to reassess.
 
-## Safety gate
+## 安全门控
 
 | Signal | Action |
 |---|---|
@@ -23,7 +23,7 @@ Make the smallest change that solves the bottleneck. Do not rewrite the entire p
 | Joint discomfort only on one movement | Modify load/range, swap close variation, reduce provocative volume. |
 | General soreness/fatigue | Adjust volume, RPE, rest, or deload based on performance trend. |
 
-## Data confidence
+## 数据置信度
 
 | Data state | Recommendation style |
 |---|---|
@@ -33,7 +33,7 @@ Make the smallest change that solves the bottleneck. Do not rewrite the entire p
 | Goal only | Give conservative starter plan and request minimum fields. |
 | Unclear screenshots | State uncertainty and avoid exact claims. |
 
-## Bottleneck to action
+## 瓶颈到行动
 
 | Bottleneck | Signs | Primary action |
 |---|---|---|
@@ -48,15 +48,15 @@ Make the smallest change that solves the bottleneck. Do not rewrite the entire p
 | Powerlifting weak point | Specific sticking point or lift lag | Add matching variation/accessory, not random volume. |
 | Specialization need | One body part lags despite general plan | Run 4-8 week priority block and reduce non-target volume. |
 
-## Action menu
+## 行动菜单
 
-### Keep plan
+### 保持计划
 
 Use when progress is occurring and fatigue is acceptable.
 
 Output: continue, define next progression threshold, track same metrics.
 
-### Add reps or load
+### 加次数或负荷
 
 Use when all sets hit the top of the rep range at target RPE/RIR.
 
@@ -67,7 +67,7 @@ Rules:
 - Machines: default +5 kg, no decimals or unsupported 2.5 kg jumps.
 - Shoulder isolations: reps/control/density before load.
 
-### Add volume or frequency
+### 加训练量或频率
 
 Use when recovery is good and target stimulus is low.
 
@@ -77,7 +77,7 @@ Rules:
 - Add exposure before cramming all volume into one session.
 - Reduce non-target volume if adding target volume creates recovery conflict.
 
-### Reduce fatigue
+### 减少疲劳
 
 Use when performance or recovery is worsening.
 
@@ -89,7 +89,7 @@ Options:
 - Reduce accessory work before key lifts unless key lifts cause pain.
 - Deload if multiple fatigue signals exist.
 
-### Change exercise
+### 更换动作
 
 Use when:
 
@@ -103,7 +103,7 @@ Do not use when:
 - The only reason is that progression is hard to calculate.
 - The movement is effective and simply needs better progression.
 
-### Change split
+### 更换分化
 
 Use when:
 
@@ -114,7 +114,7 @@ Use when:
 
 Do not change split just because another split sounds more advanced.
 
-### Run specialization
+### 运行专攻
 
 Use when one or two target muscles are clear weak points and recovery can be reallocated.
 
@@ -125,7 +125,7 @@ Rules:
 - Block length 4-8 weeks.
 - Exit if target improves, recovery fails, pain rises, or progress stalls.
 
-### Deload
+### 减载
 
 Use when two or more are present:
 
@@ -137,7 +137,7 @@ Use when two or more are present:
 
 Default: cut sets 30-50%, reduce load 5-15%, keep movement patterns, stay farther from failure.
 
-## Mixed-goal handling
+## 混合目标处理
 
 | Mixed goal | Primary logic | Secondary logic |
 |---|---|---|
@@ -147,7 +147,7 @@ Default: cut sets 30-50%, reduce load 5-15%, keep movement patterns, stay farthe
 | Fat loss + powerlifting | Strength preservation and fatigue control | Avoid aggressive deficits near tests. |
 | Body shaping + local weak point | Fat-loss/body-metric trend plus target muscle block | Do not promise local fat loss. |
 
-## Output decision format
+## 输出决策格式
 
 When using this reference, output:
 

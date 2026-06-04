@@ -1,23 +1,23 @@
-# Intake Fields
+# 收集字段
 
-## Minimum Intake
-- sex
-- age
-- height
-- weight
-- primary goal
-- activity level
-- weekly training availability
+## 最少收集
+- 性别
+- 年龄
+- 身高
+- 体重
+- 主要目标
+- 日常活动水平
+- 每周可用训练天数
 
-## Expanded Intake
-- training background
-- gym vs home preference
-- sleep and stress
-- diet style and food preferences
-- eating-out frequency
-- tracking willingness
-- injuries, chronic issues, and hard boundaries
-- current obstacles and past failures
-- coach preference
-- mixed-coach preference
-- web augmentation preference
+## 扩展收集
+- 训练背景
+- 健身房还是居家偏好
+- 睡眠和压力
+- 饮食风格和食物偏好
+- 外食频率
+- 追踪意愿
+- 伤病史、慢性问题和硬限制
+- 当前障碍和过去失败
+- 教练偏好
+- 混搭教练偏好
+- 公开增强偏好

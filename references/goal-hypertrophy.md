@@ -72,7 +72,7 @@ Use double progression by default:
 2. When all sets reach the top of the range at the target RIR, increase load by the smallest practical jump.
 3. If load jumps are too large, progress with reps, pauses, slower eccentrics, density, or set quality.
 
-## Adjustment rules
+## 调整规则
 
 - Add 1-2 hard sets per week to a target muscle only when performance and recovery are stable.
 - Reduce 20-40% volume for one week if performance drops across 2+ sessions or joint stress rises.

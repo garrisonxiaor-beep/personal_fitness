@@ -223,7 +223,7 @@ Adjustment order:
 | Fat burners | Often caffeine/stimulants | Do not rely on them. |
 | Meal replacement | Can control calories | Tool, not a long-term skill replacement. |
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

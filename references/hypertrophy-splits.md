@@ -170,7 +170,7 @@ Default weekly example:
 
 If the user asks "which split is best", answer with the split that best matches their schedule and recovery, then give one reason against the other likely options.
 
-## Output requirements
+## 输出要求
 
 When recommending a split, include:
 

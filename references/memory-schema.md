@@ -1,10 +1,10 @@
-# Memory Schema
+# 记忆结构
 
-## Health Profile
-Stores durable facts: base stats, long-term goals, activity habits, training preferences, nutrition preferences, adherence traits, risk boundaries, and effective or ineffective strategies.
+## 健康档案
+存储持久事实：基础数据、长期目标、活动习惯、训练偏好、营养偏好、执行特征、风险边界、有效和无效策略。
 
-## Health Progress
-Stores recent status: recent execution, blockers, recent strategy changes, and what to consider next time.
+## 健康进度
+存储近期状态：近期执行、障碍、近期策略变更、下次需考虑什么。
 
-## Update Rule
-Write only durable or decision-relevant information.
+## 更新规则
+只写入持久或决策相关的信息。

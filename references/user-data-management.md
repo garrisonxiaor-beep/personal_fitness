@@ -1,12 +1,12 @@
-# User Data Management
+# 用户数据管理
 
 Use this reference when the user asks to save, import, update, persist, review, or reuse long-term fitness data such as profile, training history, body metrics, or nutrition logs.
 
-## Purpose
+## 目的
 
 Maintain a portable user data store that works across Agent Skills-compatible runtimes without requiring a database.
 
-## Data store layout
+## 数据存储布局
 
 Use a folder outside the skill package for real user data, for example `user-data/` in the current project or another user-approved location.
 
@@ -20,7 +20,7 @@ user-data/
 
 Do not store private user data inside the reusable skill folder unless the user explicitly asks for a local demo fixture.
 
-## Script support
+## 脚本支持
 
 Use `scripts/manage_user_data.py` when the runtime can execute Python:
 
@@ -36,7 +36,7 @@ The script uses only the Python standard library and deduplicates repeated impor
 
 If Python execution is unavailable, create or update the JSON files manually using the templates in `templates/user-data/`.
 
-## Data types
+## 数据类型
 
 | File | Purpose | Main consumers |
 |---|---|---|
@@ -45,7 +45,7 @@ If Python execution is unavailable, create or update the JSON files manually usi
 | `body-metrics-history.json` | Weight, waist, measurements, photos, steps, sleep, cardio | `body-metrics-analysis.md` |
 | `nutrition-history.json` | Meals, calories, macros, hunger, adherence notes | `nutrition-log-analysis.md`, fat-loss module |
 
-## Update rules
+## 更新规则
 
 - Ask before creating or modifying a long-term user data folder.
 - Preserve raw imported fields under `raw` when possible.
@@ -54,7 +54,7 @@ If Python execution is unavailable, create or update the JSON files manually usi
 - Never expose API keys or private secrets in saved JSON.
 - When data conflicts, keep both records and note the conflict instead of silently overwriting.
 
-## Analysis order
+## 分析顺序
 
 1. Read `profile.json` for goal, constraints, schedule, and equipment.
 2. Read recent `training-history.json` entries for completed work.
@@ -62,7 +62,7 @@ If Python execution is unavailable, create or update the JSON files manually usi
 4. Read `nutrition-history.json` when the user asks about diet, cut, bulk, recomposition, adherence, or recovery.
 5. Route to the goal module and recommendation decision tree.
 
-## Output requirements
+## 输出要求
 
 When updating saved data, say:
 

@@ -45,7 +45,7 @@ Read `powerlifting-advanced.md` when the request involves:
 - Track e1RM trends, but do not chase e1RM at the cost of standards or technique.
 - Increase load only when bar path, depth/touch/lockout, and RPE are credible.
 
-## Adjustment rules
+## 调整规则
 
 - If a lift stalls, diagnose technical issue, volume dose, intensity exposure, and recovery before adding random accessories.
 - If deadlift fatigue spills into squat or life recovery, reduce deadlift hard sets first.

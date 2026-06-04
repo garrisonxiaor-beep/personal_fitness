@@ -1,12 +1,12 @@
-# Training Log Analysis
+# 训练日志分析
 
 Use this reference when the user provides workout logs, screenshots, app exports, API data, or text records and asks what is wrong, whether the plan is working, how to modify the plan, or why progress has stalled.
 
-## Purpose
+## 目的
 
 Turn training records into program decisions. Prefer actual completed work over intended plans.
 
-## Script support
+## 脚本支持
 
 For CSV or JSON logs, run `scripts/summarize_training_logs.py` before making the coaching judgment when the file is available locally.
 
@@ -38,7 +38,7 @@ Exercise names are matched in this order:
 
 Treat `exact`, `ambiguous_exact`, `alias`, `unique_near_name`, `ambiguous_alias`, `ambiguous_near_name`, and `unmatched` differently in the final coaching answer. `unresolved_exercises` means the exact library exercise still needs confirmation; `unmatched_exercises` means no library candidate exists. Do not present ambiguous or unmatched exercises as confirmed library entries; either ask the user to confirm the exact variation or use the outside-library fallback.
 
-## Data extraction
+## 数据提取
 
 Extract each workout into:
 
@@ -61,7 +61,7 @@ pain/fatigue:
 
 If screenshots are uncertain, mark uncertain values instead of treating them as exact.
 
-## Evidence hierarchy
+## 证据层级
 
 | Evidence | Reliability |
 |---|---|
@@ -72,7 +72,7 @@ If screenshots are uncertain, mark uncertain values instead of treating them as 
 | User memory without details | Use cautiously |
 | App screenshots with cropped/unclear values | Extract but mark uncertainty |
 
-## Core calculations
+## 核心计算
 
 | Metric | How to use |
 |---|---|
@@ -88,7 +88,7 @@ If screenshots are uncertain, mark uncertain values instead of treating them as 
 
 Volume-load is useful for context but should not override quality, RPE/RIR, range of motion, or target-muscle tension.
 
-## Weekly set targets by goal
+## 各目标周训练量参考
 
 Use goal references for final ranges. As a diagnostic starting point:
 
@@ -99,7 +99,7 @@ Use goal references for final ranges. As a diagnostic starting point:
 | Specialization | Target muscle often 12-24 hard sets/week; non-targets 4-8. |
 | Powerlifting | Count SBD competition and close-variation volume separately from bodybuilding accessories. |
 
-## Progress classification
+## 进步分类
 
 | Pattern | Diagnosis | Likely action |
 |---|---|---|
@@ -113,11 +113,11 @@ Use goal references for final ranges. As a diagnostic starting point:
 | Every set near failure and performance drops | Failure overuse | Raise RIR and reduce accessory volume. |
 | Many exercises, few trackable sets | Low signal plan | Consolidate to stable movements. |
 
-## Plateau diagnosis
+## 平台期诊断
 
 Do not call a plateau from one bad session.
 
-Hypertrophy plateau likely when:
+增肌 plateau likely when:
 
 - 3-6 weeks without rep/load improvement on key target movements.
 - Target weekly volume/frequency are appropriate.
@@ -137,7 +137,7 @@ Skill/technique plateau likely when:
 - User reports "没有感觉" in the target muscle.
 - Video/screenshot notes suggest compensation.
 
-## Movement balance checks
+## 动作平衡检查
 
 | Area | Red flag |
 |---|---|
@@ -148,7 +148,7 @@ Skill/technique plateau likely when:
 | Arms | Only indirect work despite explicit arm goal. |
 | Core | Only crunches when bracing/anti-rotation is needed for lifting goals. |
 
-## Load progression checks
+## 负荷进阶检查
 
 Apply equipment rules from `training-algorithm-library.md` after diagnosis:
 
@@ -158,7 +158,7 @@ Apply equipment rules from `training-algorithm-library.md` after diagnosis:
 - Long-lever shoulder isolations progress reps/control/density before load.
 - Do not replace an exercise only because progression math is inconvenient.
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

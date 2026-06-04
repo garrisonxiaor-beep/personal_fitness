@@ -230,7 +230,7 @@ Adjustment rules:
 - If training days are fewer than 4, use full-body or upper/lower for strength before PPL.
 - If training days are 5-6 and hypertrophy is primary, use PPL with inserted SBD technique or weak-point days.
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

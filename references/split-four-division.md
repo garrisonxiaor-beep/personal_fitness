@@ -173,7 +173,7 @@ Deload signals:
 | Leg work is only squat/leg press | Add hinge, leg curl, unilateral, calves, and core. |
 | Isolation load jumps too fast | Use reps, eccentric, peak pauses, and volume instead. |
 
-## Output requirements
+## 输出要求
 
 When using this reference, include:
 

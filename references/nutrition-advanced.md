@@ -1,8 +1,8 @@
-# Nutrition Advanced Knowledge Base
+# 营养进阶 Knowledge Base
 
 Use this reference with `skills/nutrition-engine.md` when the user asks about detailed nutrition strategies beyond basic macro targets: carb cycling execution, peri-workout nutrition, diet breaks, refeed days, plateau nutrition troubleshooting, or eating-out strategies for specific training goals.
 
-## Carb Cycling Deep Dive
+## 碳水周期深潜
 
 ### Scheduling carb cycling around training
 
@@ -27,7 +27,7 @@ Use this reference with `skills/nutrition-engine.md` when the user asks about de
 - User develops anxiety around carb timing
 - Simpler approach is achieving the same result
 
-## Peri-Workout Nutrition
+## 训练前后营养
 
 ### Before training (1-3 hours prior)
 
@@ -55,7 +55,7 @@ Usually not needed for sessions under 90 minutes. For longer sessions:
 
 The "anabolic window" is broader than 30 minutes. Total daily intake matters more than exact timing.
 
-## Diet Breaks and Refeeds
+## 饮食休息和再充碳日
 
 ### When to use a diet break
 
@@ -80,7 +80,7 @@ The "anabolic window" is broader than 30 minutes. Total daily intake matters mor
 - Expect 1-2 kg water/glycogen weight gain; this is not fat
 - Resume deficit after the break, possibly at a slightly different level
 
-## Fat-Loss Plateau Nutrition Troubleshooting
+## 减脂平台营养排查 Troubleshooting
 
 ### Step-by-step protocol
 
@@ -101,7 +101,7 @@ The "anabolic window" is broader than 30 minutes. Total daily intake matters mor
 - Ignoring sleep and stress as plateau contributors
 - Using extreme low-carb or zero-carb as a "reset" (unnecessary and hard to sustain)
 
-## Eating-Out Strategies by Training Goal
+## 外食策略 by Training Goal
 
 | Goal | Key strategy | Meal defaults |
 |---|---|---|
@@ -110,7 +110,7 @@ The "anabolic window" is broader than 30 minutes. Total daily intake matters mor
 | Recomposition | Moderate portions, protein emphasis, skip sugary drinks | Lean protein + moderate starch + vegetables |
 | Powerlifting | Fuel for next session; don't under-eat before heavy days | Protein + substantial carbs + normal fat |
 
-## Hydration and Electrolytes
+## 水合和电解质
 
 ### Daily water targets
 - Baseline: 30-40 ml/kg bodyweight
@@ -122,7 +122,7 @@ The "anabolic window" is broader than 30 minutes. Total daily intake matters mor
 - Potassium: emphasize food sources (bananas, potatoes, leafy greens)
 - Magnesium: supplement only if dietary intake is low or cramps are frequent
 
-## Meal Frequency and Timing
+## 进餐频率和时机
 
 | Approach | Meals/day | Best for | Coach style match |
 |---|---|---|---|
@@ -133,7 +133,7 @@ The "anabolic window" is broader than 30 minutes. Total daily intake matters mor
 
 Total daily intake matters more than meal frequency. Choose the pattern the user can sustain.
 
-## Nutrition and Sleep
+## 营养与睡眠
 
 Poor sleep reduces:
 - Insulin sensitivity (harder to handle carbs)
@@ -147,7 +147,7 @@ When sleep is poor:
 - Avoid large late-night meals that might further disrupt sleep
 - Prioritize sleep improvement over dietary optimization
 
-## Safety Reminders
+## 安全提醒
 
 - Do not recommend diets below 1200 kcal (female) or 1500 kcal (male) without medical supervision
 - Do not recommend eliminating entire macronutrient groups
