@@ -1,1 +1,12 @@
-.worktrees/
+# OS
+.DS_Store
+
+# Exercise database (downloaded separately)
+exercise-db/
+
+# User data (runtime-generated)
+user-data/
+
+# Python
+__pycache__/
+*.pyc
