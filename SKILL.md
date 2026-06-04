@@ -17,6 +17,7 @@ Turn user fitness data into systematic, goal-aware, coach-style-personalized tra
 - `coach_profiles/`: named coach-method profiles used for matching and mixing
 - `coach_research_notes/`: optional public-content augmentation notes for named coaches
 - `data/`: built-in exercise library (147+ exercises with Chinese names, body parts, movement patterns, and goals)
+- `templates/`: intake and user-data JSON templates
 - `scripts/`: exercise database setup, query tools, and user data management
 - `examples/`: example interactions and memory updates
 
@@ -98,9 +99,9 @@ Accept any of these inputs:
    Use `data/exercise-library.json` for exercise selection and substitutions. Read `references/exercise-library-schema.md` when extending the library. If the exercise is not in the library, use alias matching, same-pattern substitutions, or temporary outside-library exercises with clear labeling. If the external `exercise-db/` is available, prefer it for image-backed lookup via `scripts/query_exercises.py`.
 
 9. **Analyze existing data when available.**
-   - Training logs → `references/training-log-analysis.md` (Phase 3: `scripts/summarize_training_logs.py`)
-   - Body metrics → `references/body-metrics-analysis.md` (Phase 3)
-   - Nutrition logs → `references/nutrition-log-analysis.md` (Phase 3)
+   - Training logs → `references/training-log-analysis.md`; run `scripts/summarize_training_logs.py` for CSV/JSON logs
+   - Body metrics → `references/body-metrics-analysis.md`
+   - Nutrition logs → `references/nutrition-log-analysis.md`; use `scripts/manage_user_data.py import-nutrition` to persist records
 
 10. **Diagnose and decide.**
     Use `references/recommendation-decision-tree.md` to identify the bottleneck and choose the smallest useful change.
