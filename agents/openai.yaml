@@ -1,0 +1,4 @@
+interface:
+  display_name: "Personal Fitness Coach"
+  short_description: "Systematic fitness planning with coach-style selection, goal-aware programming, exercise library, and long-term user data"
+  default_prompt: "Use /fitness to analyze my profile, workout logs, body metrics, and nutrition history, then produce a systematic plan across hypertrophy, fat loss, specialization, or powerlifting — with my preferred coach style."
