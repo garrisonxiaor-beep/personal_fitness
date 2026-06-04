@@ -1,14 +1,14 @@
-# Fitness Intake Template
+# 健身信息收集模板
 
-Use only the fields needed for the current decision. Do not ask all questions if the user already provided enough context.
+只使用当前决策需要的字段。如用户已提供足够上下文，不要问所有问题。
 
-1. Primary goal and deadline:
-2. Age, sex, height, weight:
-3. Training age and recent consistency:
-4. Weekly training days and session length:
-5. Equipment and load increments:
-6. Current split, exercises, sets, reps, load, RPE/RIR:
-7. Recent 2-6 week progress or stalled lifts/body metrics:
-8. Pain, injury history, fatigue, sleep, stress:
-9. Preferences, disliked exercises, must-keep exercises:
-10. Nutrition or bodyweight trend if relevant:
+1. 主要目标和截止时间：
+2. 年龄、性别、身高、体重：
+3. 训练年限和近期一致性：
+4. 每周训练天数和每次时长：
+5. 器械和负荷增量：
+6. 当前分化、动作、组数、次数、负荷、RPE/RIR：
+7. 近 2-6 周进度或停滞的动作/身体数据：
+8. 疼痛、伤病史、疲劳、睡眠、压力：
+9. 偏好、不喜欢的动作、必须保留的动作：
+10. 营养或体重趋势（如相关）：

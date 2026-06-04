@@ -4,8 +4,8 @@ user_id: example-user
 updated_at: YYYY-MM-DD
 ---
 
-# Recent Status
-# Recent Execution
-# Current Blockers
-# Recent Strategy Changes
-# Consider Next Time
+# 近期状态
+# 近期执行
+# 当前障碍
+# 近期策略变更
+# 下次需考虑

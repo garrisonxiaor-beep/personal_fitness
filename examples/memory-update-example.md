@@ -1,6 +1,6 @@
-# Memory Update Example
+# 记忆更新示例
 
-- Save to profile: preferred coach = 周六野
-- Save to profile: mixed coach plan = 力量=凯圣王×谭指导, 有氧=Pamela Reif, 恢复=Coffee Lam
-- Save to profile: web augmentation preference = only on request
-- Save to progress: current blocker = overtime reduced training frequency this week
+- 保存到档案：偏好教练 = 周六野
+- 保存到档案：混搭计划 = 力量=凯圣王×谭指导, 有氧=Pamela Reif, 恢复=Coffee Lam
+- 保存到档案：公开增强偏好 = 仅在请求时使用
+- 保存到进度：当前障碍 = 加班导致本周训练频率下降

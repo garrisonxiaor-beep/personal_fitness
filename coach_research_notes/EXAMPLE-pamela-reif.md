@@ -1,25 +1,25 @@
-# Pamela Reif Research Augmentation
+# Pamela Reif 调研增强
 
-## Research Status
-- source mode: public-web
-- freshness: 2026-05-14
-- confidence: medium
-- usage: optional augmentation only
+## 调研状态
+- 来源模式：公开网络
+- 新鲜度：2026-05-14
+- 置信度：中等
+- 用途：仅可选增强
 
-## Public Content Signals
-- In sampled recent public content, sessions often appear short, dense, and home-friendly.
-- In sampled recent public content, session framing appears to lean toward efficient full-body or cardio-heavy blocks.
-- In sampled public examples, the tone appears completion-oriented and rhythm-driven.
+## 公开内容信号
+- 在抽样近期公开内容中，课程通常短时、高密度且居家友好。
+- 在抽样近期公开内容中，课程框架偏向高效全身或有氧密集模块。
+- 在抽样公开示例中，语气偏向完成度导向和节奏驱动。
 
-## Reinforced Style Notes
-- Compared with the static profile, sampled recent public content supports the impression of time-efficient, high-density training.
-- The public-facing tone appears more aligned with quick execution and polished follow-along structure than with detailed coaching explanation.
+## 强化的风格备注
+- 与静态档案相比，抽样近期公开内容支持时间高效、高密度训练的印象。
+- 公开语气更偏向快速执行和精致的跟练结构，而非详细的教学解释。
 
-## Source Caveats
-- This note reflects public-facing content samples, not a complete coaching system.
-- Platform recency can shift quickly.
-- Public emphasis does not prove universal suitability.
+## 来源注意事项
+- 本笔记反映公开内容样本，不代表完整教练体系。
+- 平台时效性可能快速变化。
+- 公开重点不证明普遍适用性。
 
-## Integration Notes
-- Use this note only when the user explicitly asks for newer public-content nuance.
-- Keep the static profile as the main suitability baseline.
+## 整合备注
+- 仅在用户明确要求更新公开内容细节时使用本笔记。
+- 以静态档案作为主要适配基线。
